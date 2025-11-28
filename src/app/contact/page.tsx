@@ -20,6 +20,10 @@ const socialLinks: SocialLink[] = [
     label: "Twitter",
     href: "https://twitter.com/yourusername",
   },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/sixnathen/",
+  },
 ];
 
 export default function Contact() {
