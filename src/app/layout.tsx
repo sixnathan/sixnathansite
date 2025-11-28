@@ -34,11 +34,6 @@ export default function RootLayout({
           </header>
           <main>{children}</main>
         </div>
-        <footer className="w-full border-t border-zinc-500">
-          <div className="max-w-2xl mx-auto px-6 py-8 text-sm text-muted">
-            <p>sixnathan</p>
-          </div>
-        </footer>
       </body>
     </html>
   );
