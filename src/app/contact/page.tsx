@@ -6,19 +6,7 @@ interface SocialLink {
 const socialLinks: SocialLink[] = [
   {
     label: "Email",
-    href: "mailto:your@email.com",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/sixnathan",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
-  },
-  {
-    label: "Twitter",
-    href: "https://twitter.com/yourusername",
+    href: "mailto:dev@sixnathan.com",
   },
   {
     label: "Instagram",
