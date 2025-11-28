@@ -42,7 +42,7 @@ export default function Projects() {
         {projects.map((project) => (
           <article
             key={project.title}
-            className="p-4 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors"
+            className="p-4 border border-zinc-400 rounded-lg hover:border-zinc-300 transition-colors bg-zinc-500/30"
           >
             <h2 className="text-lg font-semibold mb-2">
               {project.link ? (
@@ -63,7 +63,7 @@ export default function Projects() {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-2 py-1 bg-zinc-800 rounded"
+                  className="text-xs px-2 py-1 bg-zinc-500 rounded"
                 >
                   {tag}
                 </span>

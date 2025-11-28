@@ -56,7 +56,7 @@ function Content({ content }: { content: string }) {
         elements.push(
           <pre
             key={`code-${index}`}
-            className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 overflow-x-auto my-4"
+            className="bg-zinc-600 border border-zinc-400 rounded-lg p-4 overflow-x-auto my-4"
           >
             <code className="text-sm font-mono text-zinc-300">
               {codeContent.join("\n")}
@@ -138,7 +138,7 @@ function formatInlineStyles(text: string): React.ReactNode {
         parts.push(remaining.slice(0, codeIdx));
       }
       parts.push(
-        <code key={`code-${keyIndex++}`} className="bg-zinc-800 px-1.5 py-0.5 rounded text-sm font-mono">
+        <code key={`code-${keyIndex++}`} className="bg-zinc-500 px-1.5 py-0.5 rounded text-sm font-mono">
           {codeMatch[1]}
         </code>
       );
