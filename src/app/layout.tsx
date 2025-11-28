@@ -26,17 +26,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <div className="max-w-2xl mx-auto px-6 py-12">
+        <div className="max-w-2xl mx-auto px-6 py-12 flex-1 w-full">
           <header className="mb-16">
             <Navigation />
           </header>
           <main>{children}</main>
-          <footer className="mt-16 pt-8 border-t border-zinc-800 text-sm text-muted">
-            <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
-          </footer>
         </div>
+        <footer className="w-full border-t border-zinc-800">
+          <div className="max-w-2xl mx-auto px-6 py-8 text-sm text-muted">
+            <p>sixnathan</p>
+          </div>
+        </footer>
       </body>
     </html>
   );
