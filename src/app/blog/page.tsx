@@ -9,7 +9,7 @@ export default function Blog() {
       <section>
         <h1 className="text-3xl font-bold mb-4">Blog</h1>
         <p className="text-muted">
-          Thoughts, ideas, and things I&apos;ve learned along the way.
+          random thoughts
         </p>
       </section>
 

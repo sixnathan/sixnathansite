@@ -2,22 +2,19 @@ export default function Home() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="text-3xl font-bold mb-4">Your Name</h1>
+        <h1 className="text-3xl font-bold mb-4">sixnathan</h1>
         <p className="text-muted text-lg">
-          A brief tagline or description about yourself.
+          volume button without a button because it is actually a volume dial
         </p>
       </section>
 
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">About</h2>
         <p className="text-muted leading-relaxed">
-          Write a paragraph or two about yourself here. What do you do? What are
-          you interested in? What drives you? This is your chance to introduce
-          yourself to visitors.
+          working on some cool stuff, lmk if u wanna get in on it. 
         </p>
         <p className="text-muted leading-relaxed">
-          You can add more paragraphs, include links to your work, or mention
-          what you&apos;re currently focused on.
+          its called an addiction. 
         </p>
       </section>
 

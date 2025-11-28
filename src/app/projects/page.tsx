@@ -9,20 +9,21 @@ const projects: Project[] = [
   {
     title: "Project One",
     description:
-      "A brief description of what this project is about and what technologies you used.",
+      "thingy1.",
     link: "https://github.com/yourusername/project",
     tags: ["React", "TypeScript"],
   },
   {
     title: "Project Two",
     description:
-      "Another project description. Explain what problem it solves or why you built it.",
+      "thingy2.",
+    link: "https://github.com/yourusername/project",
     tags: ["Python", "Machine Learning"],
   },
   {
     title: "Project Three",
     description:
-      "You can add as many projects as you want. Keep descriptions concise but informative.",
+      "thingy3",
     link: "https://example.com",
     tags: ["Next.js", "Tailwind"],
   },
@@ -34,7 +35,7 @@ export default function Projects() {
       <section>
         <h1 className="text-3xl font-bold mb-4">Projects</h1>
         <p className="text-muted">
-          A collection of things I&apos;ve built and worked on.
+          A collection of things I&apos;m making atm.
         </p>
       </section>
 

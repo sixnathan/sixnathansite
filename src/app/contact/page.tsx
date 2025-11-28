@@ -10,7 +10,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/sixnathan",
   },
   {
     label: "LinkedIn",
@@ -28,15 +28,14 @@ export default function Contact() {
       <section>
         <h1 className="text-3xl font-bold mb-4">Contact</h1>
         <p className="text-muted">
-          Feel free to reach out. I&apos;m always happy to connect.
+          talk to me.
         </p>
       </section>
 
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">Get in Touch</h2>
         <p className="text-muted leading-relaxed">
-          The best way to reach me is via email. I try to respond within a few
-          days.
+          email me NOW.
         </p>
       </section>
 
