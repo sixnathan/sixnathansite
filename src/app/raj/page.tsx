@@ -19,7 +19,7 @@ export default function Blog() {
         ) : (
           posts.map((post) => (
             <article key={post.slug} className="group">
-              <Link href={`/blog/${post.slug}`} className="block">
+              <Link href={`/raj/${post.slug}`} className="block">
                 <time className="text-sm text-muted">{post.date}</time>
                 <h2 className="text-lg font-semibold mt-1 group-hover:text-accent transition-colors">
                   {post.title}

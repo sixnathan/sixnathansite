@@ -23,7 +23,7 @@ export default async function BlogPost({ params }: Props) {
     <article className="space-y-8">
       <header>
         <Link
-          href="/blog"
+          href="/raj"
           className="text-sm text-muted hover:text-accent transition-colors"
         >
           ← Back to blog
