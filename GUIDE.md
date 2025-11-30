@@ -22,7 +22,17 @@ sixnathan/
 
 ---
 
-## Creating Blog Posts
+## Creating Blog Posts vs Reading Links
+
+Your blog page can display two types of content:
+- **Blog Posts**: Full articles you write with markdown content
+- **Reading Links**: Quick links to articles/content you're reading with a short comment
+
+Both appear on the same page, sorted by date (newest first).
+
+---
+
+## Creating a Blog Post
 
 ### 1. Create a new MDX file
 
@@ -81,6 +91,63 @@ Use **bold text** for emphasis.
 ```bash
 npm run dev    # Preview locally at http://localhost:3000
 npm run build  # Build for production
+```
+
+---
+
+## Adding a Reading Link
+
+Reading links are for sharing articles, videos, or content you're currently reading/watching. They appear on your blog page with a ↗ icon and link directly to the source.
+
+### 1. Create a new MDX file
+
+Create a file in `content/reading/` with a `.mdx` extension:
+
+```
+content/reading/interesting-article.mdx
+```
+
+The filename is just for organization - it won't be used as a URL.
+
+### 2. Add frontmatter
+
+Every reading link needs this frontmatter:
+
+```mdx
+---
+title: "Article Title or What You're Reading"
+link: "https://example.com/article"
+date: "2024-11-28"
+comment: "A short comment about why this is interesting"
+---
+```
+
+**Fields:**
+- `title`: The name of what you're reading
+- `link`: The full URL to the content
+- `date`: Date in YYYY-MM-DD format (used for sorting)
+- `comment`: A brief note about why you're reading it or what's interesting
+
+### 3. No content needed
+
+Reading links don't need any content below the frontmatter - just the frontmatter is enough!
+
+### 4. Build and preview
+
+```bash
+npm run dev    # Preview locally at http://localhost:3000
+npm run build  # Build for production
+```
+
+**Example reading link file:**
+
+```mdx
+---
+title: "The State of JavaScript 2024"
+link: "https://stateofjs.com/2024"
+date: "2024-11-28"
+comment: "Interesting insights on modern JS frameworks and tooling trends"
+---
 ```
 
 ---
