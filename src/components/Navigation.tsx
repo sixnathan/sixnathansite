@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/prk", label: "Projects" },
-  { href: "/sav", label: "Gallery" },
-  { href: "/raj", label: "Blog" },
-  { href: "/tom", label: "Contact" },
+  { href: "/", label: "home" },
+  { href: "/prk", label: "projects" },
+  { href: "/sav", label: "gallery" },
+  { href: "/raj", label: "thoughts" },
+  { href: "/tom", label: "contact" },
 ];
 
 export default function Navigation() {

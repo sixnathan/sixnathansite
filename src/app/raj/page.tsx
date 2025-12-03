@@ -7,10 +7,7 @@ export default function Blog() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="text-3xl font-bold mb-4">Blog</h1>
-        <p className="text-muted">
-          random thoughts & things i&apos;m reading
-        </p>
+        <h1 className="text-3xl font-bold mb-4">thoughts</h1>
       </section>
 
       <section className="space-y-6">

@@ -9,12 +9,11 @@ export default function Home() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">About</h2>
         <p className="text-muted leading-relaxed">
-          working on some cool stuff, lmk if u wanna get in on it. 
+          working on some cool stuff, lmk if u wanna get in on it.
         </p>
         <p className="text-muted leading-relaxed">
-          its called an addiction. 
+          its called an addiction.
         </p>
       </section>
 

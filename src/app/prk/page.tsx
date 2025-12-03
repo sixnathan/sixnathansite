@@ -17,10 +17,7 @@ export default function Projects() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="text-3xl font-bold mb-4">Projects</h1>
-        <p className="text-muted">
-          A collection of things I&apos;m making atm.
-        </p>
+        <h1 className="text-3xl font-bold mb-4">projects</h1>
       </section>
 
       <section className="space-y-6">

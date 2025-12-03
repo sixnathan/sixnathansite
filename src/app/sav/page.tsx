@@ -12,10 +12,7 @@ export default function Gallery() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="text-3xl font-bold mb-4">Gallery</h1>
-        <p className="text-muted">
-          stuff i&apos;m working on rn
-        </p>
+        <h1 className="text-3xl font-bold mb-4">gallery</h1>
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">

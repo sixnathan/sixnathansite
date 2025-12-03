@@ -5,11 +5,11 @@ interface SocialLink {
 
 const socialLinks: SocialLink[] = [
   {
-    label: "Email",
+    label: "email",
     href: "mailto:dev@sixnathan.com",
   },
   {
-    label: "Instagram",
+    label: "instagram",
     href: "https://www.instagram.com/sixnathen/",
   },
 ];
@@ -18,14 +18,14 @@ export default function Contact() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="text-3xl font-bold mb-4">Contact</h1>
+        <h1 className="text-3xl font-bold mb-4">contact</h1>
         <p className="text-muted">
           talk to me.
         </p>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Links</h2>
+        <h2 className="text-xl font-semibold">links</h2>
         <ul className="space-y-3">
           {socialLinks.map((link) => (
             <li key={link.label}>
