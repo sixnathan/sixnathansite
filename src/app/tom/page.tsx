@@ -8,10 +8,6 @@ const socialLinks: SocialLink[] = [
     label: "email",
     href: "mailto:dev@sixnathan.com",
   },
-  {
-    label: "instagram",
-    href: "https://www.instagram.com/sixnathen/",
-  },
 ];
 
 export default function Contact() {
@@ -25,7 +21,6 @@ export default function Contact() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">links</h2>
         <ul className="space-y-3">
           {socialLinks.map((link) => (
             <li key={link.label}>
