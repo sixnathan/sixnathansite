@@ -2,30 +2,13 @@ interface Project {
   title: string;
   description: string;
   link?: string;
-  tags: string[];
 }
 
 const projects: Project[] = [
   {
-    title: "Project One",
+    title: "v1 linear regression",
     description:
-      "thingy1.",
-    link: "https://github.com/yourusername/project",
-    tags: ["React", "TypeScript"],
-  },
-  {
-    title: "Project Two",
-    description:
-      "thingy2.",
-    link: "https://github.com/yourusername/project",
-    tags: ["Python", "Machine Learning"],
-  },
-  {
-    title: "Project Three",
-    description:
-      "thingy3",
-    link: "https://example.com",
-    tags: ["Next.js", "Tailwind"],
+      "cs 229 is pretty fun.",
   },
 ];
 
@@ -60,16 +43,6 @@ export default function Projects() {
               )}
             </h2>
             <p className="text-muted text-sm mb-3">{project.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs px-2 py-1 border border-zinc-400 rounded"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
           </article>
         ))}
       </section>

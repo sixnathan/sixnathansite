@@ -25,13 +25,6 @@ export default function Contact() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Get in Touch</h2>
-        <p className="text-muted leading-relaxed">
-          email me NOW.
-        </p>
-      </section>
-
-      <section className="space-y-4">
         <h2 className="text-xl font-semibold">Links</h2>
         <ul className="space-y-3">
           {socialLinks.map((link) => (

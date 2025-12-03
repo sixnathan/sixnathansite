@@ -6,22 +6,7 @@ interface GalleryImage {
   caption?: string;
 }
 
-const images: GalleryImage[] = [
-  {
-    src: "/images/gallery/image1.jpg",
-    alt: "Description of image 1",
-    caption: "What I'm working on",
-  },
-  {
-    src: "/images/gallery/image2.jpg",
-    alt: "Description of image 2",
-    caption: "Another cool thing",
-  },
-  {
-    src: "/images/gallery/image3.jpg",
-    alt: "Description of image 3",
-  },
-];
+const images: GalleryImage[] = [];
 
 export default function Gallery() {
   return (

@@ -18,14 +18,6 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Currently</h2>
-        <ul className="text-muted space-y-2">
-          <li>• Working on something interesting</li>
-          <li>• Learning something new</li>
-          <li>• Building something cool</li>
-        </ul>
-      </section>
     </div>
   );
 }

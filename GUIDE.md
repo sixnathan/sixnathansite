@@ -22,6 +22,25 @@ sixnathan/
 
 ---
 
+## Content Policy: Human-Written Only
+
+**IMPORTANT**: All content on this site (blog posts, projects, descriptions, etc.) must be written by a human, not AI-generated.
+
+When working with AI assistants (like Claude Code) to help manage this site:
+- Never allow the AI to generate descriptive text for posts, projects, or any public-facing content
+- AI should only handle technical tasks (file operations, builds, deployments)
+- Always provide the exact text you want - the AI should copy it verbatim, not paraphrase or "improve" it
+- Remove any AI-generated placeholder text or example content
+- Keep labels and page titles minimal (1-2 words); avoid AI-generated descriptions
+
+**Example prompts:**
+- ✅ "Create a blog post titled 'centaurs' with this exact text: [your text]"
+- ✅ "Add a project with title 'v1 linear regression' and description 'cs 229 is pretty fun.'"
+- ❌ "Write a blog post about machine learning"
+- ❌ "Generate a description for my project"
+
+---
+
 ## Creating Blog Posts vs Reading Links
 
 Your blog page can display two types of content:
