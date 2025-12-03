@@ -3,7 +3,6 @@ export default function V1LinearRegression() {
     <div className="space-y-8">
       <section>
         <h1 className="text-3xl font-bold mb-4">v1 linear regression</h1>
-        <p className="text-muted">cs 229 is pretty fun.</p>
       </section>
 
       <section>

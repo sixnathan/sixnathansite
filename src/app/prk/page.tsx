@@ -7,8 +7,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "v1 linear regression",
-    description:
-      "cs 229 is pretty fun.",
+    description: "",
     link: "/prk/v1linreg",
   },
 ];
