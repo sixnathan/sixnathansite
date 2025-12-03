@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "sixnathan",
-  description: "i am going to touch you",
+  description: "cry your eyes out",
   icons: {
     icon: "/favicon.png",
   },

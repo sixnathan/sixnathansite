@@ -4,14 +4,11 @@ export default function Home() {
       <section>
         <h1 className="text-3xl font-bold mb-4">sixnathan</h1>
         <p className="text-muted text-lg">
-          volume button without a button because it is actually a volume dial
+          we must not fear daylight just because it almost always illuminates a miserable world
         </p>
       </section>
 
       <section className="space-y-4">
-        <p className="text-muted leading-relaxed">
-          working on some cool stuff, lmk if u wanna get in on it.
-        </p>
         <p className="text-muted leading-relaxed">
           its called an addiction.
         </p>
