@@ -9,6 +9,7 @@ const projects: Project[] = [
     title: "v1 linear regression",
     description:
       "cs 229 is pretty fun.",
+    link: "/prk/v1linreg",
   },
 ];
 
@@ -32,8 +33,6 @@ export default function Projects() {
               {project.link ? (
                 <a
                   href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="hover:text-accent"
                 >
                   {project.title} →
