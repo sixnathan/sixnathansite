@@ -6,7 +6,7 @@ export default function V1LogisticRegression() {
       </section>
 
       <section>
-        <pre className="p-4 border border-zinc-400 rounded-lg overflow-x-auto">
+        <pre className="p-4 border border-zinc-400 rounded-lg whitespace-pre-wrap break-words">
           <code>{`import numpy as np
 
 def sig(z):
