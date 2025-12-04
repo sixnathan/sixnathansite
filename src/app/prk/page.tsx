@@ -12,7 +12,7 @@ const projects: Project[] = [
   },
   {
     title: "v1 logreg",
-    description: "",
+    description: "forgot to clip sigmoid but oh well",
     link: "/prk/v1logreg",
   },
 ];
