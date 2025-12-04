@@ -1,8 +1,9 @@
-export default function V1LinearRegression() {
+export default function LinearRegression() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="text-3xl font-bold mb-4">v1 linear regression</h1>
+        <h1 className="text-3xl font-bold mb-4">linreg</h1>
+        <p className="text-muted text-sm">December 4, 2025</p>
       </section>
 
       <section>

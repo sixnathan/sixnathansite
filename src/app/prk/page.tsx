@@ -6,14 +6,14 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "v1 linear regression",
-    description: "",
-    link: "/prk/v1linreg",
+    title: "logreg",
+    description: "forgot to clip sigmoid but oh well",
+    link: "/prk/logreg",
   },
   {
-    title: "v1 logreg",
-    description: "forgot to clip sigmoid but oh well",
-    link: "/prk/v1logreg",
+    title: "linreg",
+    description: "its just a guessing game",
+    link: "/prk/linreg",
   },
 ];
 
