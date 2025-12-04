@@ -9,25 +9,28 @@ export default function V1LogisticRegression() {
         <pre className="p-4 border border-zinc-400 rounded-lg whitespace-pre-wrap break-words">
           <code>{`import numpy as np
 
-def sig(z):
-    h = 1 / (1 + np.exp(-z))
-    return h
+class LogisticRegression:
+    def __init__(self):
+        self.theta = None
 
-def cost(X, y, theta):
-    b = X @ theta
-    thing = np.sum(y * np.log(sig(b)) + (1-y) * np.log(1-sig(b)))
-    cost = (-1/(X.shape[0])) * thing
-    return cost
+    def sig(self, z):
+        h = 1 / (1 + np.exp(-z))
+        return h
 
-def graddec(X, y, rate, iterations):
-    theta = np.zeros((X.shape[1], 1))
-    for i in range(iterations):
-        b = X @ theta
-        hypo = sig(b)
-        newgrad = (1/X.shape[0]) * X.T @ (hypo - y)
-        theta = theta - rate * newgrad
-        print(cost(X, y, theta))
-    return theta`}</code>
+    def hypo(self, X):
+        return self.sig(X @ self.theta)
+
+    def cost(self, X, y):
+        h = self.hypo(X)
+        cost = (-1/X.shape[0]) * np.sum(y * np.log(h) + (1-y) * np.log(1-h))
+        return cost
+
+    def graddec(self, X, y, rate, iterations):
+        self.theta = np.zeros((X.shape[1], 1))
+        for i in range(iterations):
+            h = self.hypo(X)
+            newgrad = (1/X.shape[0]) * X.T @ (h - y)
+            self.theta = self.theta - rate * newgrad`}</code>
         </pre>
       </section>
     </div>
