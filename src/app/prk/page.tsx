@@ -10,6 +10,11 @@ const projects: Project[] = [
     description: "",
     link: "/prk/v1linreg",
   },
+  {
+    title: "v1 logreg",
+    description: "",
+    link: "/prk/v1logreg",
+  },
 ];
 
 export default function Projects() {
