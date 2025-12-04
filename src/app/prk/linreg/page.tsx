@@ -3,7 +3,7 @@ export default function LinearRegression() {
     <div className="space-y-8">
       <section>
         <h1 className="text-3xl font-bold mb-4">linreg</h1>
-        <p className="text-muted text-sm">December 4, 2025</p>
+        <time className="text-sm text-muted">2025-12-02</time>
       </section>
 
       <section>

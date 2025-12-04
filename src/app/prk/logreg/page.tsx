@@ -3,7 +3,7 @@ export default function LogisticRegression() {
     <div className="space-y-8">
       <section>
         <h1 className="text-3xl font-bold mb-4">logreg</h1>
-        <p className="text-muted text-sm">December 4, 2025</p>
+        <time className="text-sm text-muted">2025-12-04</time>
       </section>
 
       <section>
