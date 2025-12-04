@@ -26,6 +26,7 @@ def graddec(X, y, rate, iterations):
         hypo = sig(b)
         newgrad = (1/X.shape[0]) * X.T @ (hypo - y)
         theta = theta - rate * newgrad
+        print(cost(X, y, theta))
     return theta`}</code>
         </pre>
       </section>
