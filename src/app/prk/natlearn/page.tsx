@@ -2,18 +2,21 @@ interface Algorithm {
   title: string;
   description: string;
   link: string;
+  date: string;
 }
 
 const algorithms: Algorithm[] = [
   {
-    title: "linreg",
-    description: "its just a guessing game",
-    link: "/prk/natlearn/linreg",
-  },
-  {
     title: "logreg",
     description: "forgot to clip sigmoid but oh well",
     link: "/prk/natlearn/logreg",
+    date: "2025-12-04",
+  },
+  {
+    title: "linreg",
+    description: "its just a guessing game",
+    link: "/prk/natlearn/linreg",
+    date: "2025-12-02",
   },
 ];
 
@@ -22,8 +25,11 @@ export default function Natlearn() {
     <div className="space-y-8">
       <section>
         <h1 className="text-3xl font-bold mb-4">natlearn</h1>
-        <p className="text-muted text-sm">
+        <p className="text-muted text-sm mb-4">
           a machine learning library built from scratch
+        </p>
+        <p className="text-sm">
+          its unlikely that ill ever be a hardcore machine learning/deep learning engineer, but i feel its pretty important to understand how systems work in order to better make use of them.
         </p>
       </section>
 
@@ -41,7 +47,8 @@ export default function Natlearn() {
                 {algorithm.title} →
               </a>
             </h2>
-            <p className="text-muted text-sm mb-3">{algorithm.description}</p>
+            <p className="text-muted text-sm mb-1">{algorithm.description}</p>
+            <time className="text-xs text-muted">{algorithm.date}</time>
           </article>
         ))}
       </section>
