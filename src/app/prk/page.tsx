@@ -6,14 +6,9 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "logreg",
-    description: "forgot to clip sigmoid but oh well",
-    link: "/prk/logreg",
-  },
-  {
-    title: "linreg",
-    description: "its just a guessing game",
-    link: "/prk/linreg",
+    title: "natlearn",
+    description: "a machine learning library built from scratch",
+    link: "/prk/natlearn",
   },
 ];
 
