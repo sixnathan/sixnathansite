@@ -4,7 +4,7 @@ export default function Home() {
       <section>
         <h1 className="text-3xl font-bold mb-4">sixnathan</h1>
         <p className="text-muted text-lg">
-          we must not fear daylight just because it illuminates an alien world
+          why not you?
         </p>
       </section>
 
