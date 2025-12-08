@@ -41,18 +41,13 @@ const modules: Module[] = [
 export default function Natmood() {
   return (
     <div className="space-y-8">
-      <div>
-        <a href="/prk" className="text-sm text-muted hover:text-accent">
-          ← back to projects
-        </a>
-      </div>
       <section>
         <h1 className="text-3xl font-bold mb-4">natmood</h1>
         <p className="text-muted text-sm mb-4">
-          binary valence classifier using randomforest validated on dreamer and adaptable to muse 4
+          a binary valence mood classifier built 'mostly' from scratch
         </p>
         <p className="text-sm">
-          primary neurological marker for positive/neutral/negative emotion. extracts 9 features per channel while trained on four channels.
+          binary valence classifier using randomforest validated on dreamer and adaptable to muse 4. primary neurological marker for positive/neutral/negative emotion. extracts 9 features per channel while trained on four channels.
         </p>
       </section>
 

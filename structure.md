@@ -190,11 +190,13 @@ This ensures the documentation stays current and all changes are versioned.
 **File**: `src/app/prk/page.tsx`
 
 **Projects Listed**:
-1. **natmood** - Binary valence classifier using Random Forest, validated on DREAMER, adaptable to Muse 4. Primary neurological marker for positive/neutral/negative emotion. Extracts 9 features per channel while trained on four channels.
+1. **natmood** - A binary valence mood classifier built 'mostly' from scratch
 2. **natlearn** - Machine learning library built from scratch
 
 #### `/prk/natmood` - EEG Emotion Classification Project
 **File**: `src/app/prk/natmood/page.tsx`
+
+**Description**: A binary valence mood classifier built 'mostly' from scratch. Binary valence classifier using randomforest validated on dreamer and adaptable to muse 4. Primary neurological marker for positive/neutral/negative emotion. Extracts 9 features per channel while trained on four channels.
 
 **Modules**:
 1. **main** - Complete pipeline orchestrator tying all modules together
