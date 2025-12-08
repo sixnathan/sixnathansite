@@ -19,6 +19,7 @@ This ensures the documentation stays current and all changes are versioned.
 1. **Code Snippet Display**: No horizontal scrollbar - increase container width instead of using `overflow-x-auto`
    - Main container width: `max-w-5xl` (changed from `max-w-2xl`)
    - Code blocks should display without horizontal scrolling
+   - Remove all comments from Python code snippets for cleaner display
 
 2. **Project Descriptions**:
    - Keep project card descriptions concise on listing pages
@@ -27,6 +28,7 @@ This ensures the documentation stays current and all changes are versioned.
 
 3. **Navigation**:
    - No "back to projects" links on project pages
+   - No "back to natmood" links on module pages
 
 4. **Git Workflow**:
    - Commit and push after every codebase change

@@ -1,11 +1,6 @@
 export default function Dataloader() {
   return (
     <div className="space-y-8">
-      <div>
-        <a href="/prk/natmood" className="text-sm text-muted hover:text-accent">
-          ← back to natmood
-        </a>
-      </div>
       <section>
         <h1 className="text-3xl font-bold mb-4">dataloader</h1>
         <time className="text-sm text-muted">2025-12-08</time>
@@ -29,7 +24,6 @@ def loaddreamer(filepath):
         for video in range(nvideos):
             eegtrial = data[participant]['EEG'][0, 0]['stimuli'][0, 0][video, 0]
 
-            # Transpose to get (n_channels, n_samples) instead of (n_samples, n_channels)
             if eegtrial.shape[0] > eegtrial.shape[1]:
                 eegtrial = eegtrial.T
 
@@ -40,7 +34,6 @@ def loaddreamer(filepath):
             allvalence.append(valence)
             allarousal.append(arousal)
 
-    # Convert to arrays
     eegdata = np.empty(len(alleeg), dtype=object)
     for i, trial in enumerate(alleeg):
         eegdata[i] = trial

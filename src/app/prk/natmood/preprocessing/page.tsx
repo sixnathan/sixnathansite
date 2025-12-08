@@ -1,11 +1,6 @@
 export default function Preprocessing() {
   return (
     <div className="space-y-8">
-      <div>
-        <a href="/prk/natmood" className="text-sm text-muted hover:text-accent">
-          ← back to natmood
-        </a>
-      </div>
       <section>
         <h1 className="text-3xl font-bold mb-4">preprocessing</h1>
         <time className="text-sm text-muted">2025-12-08</time>
@@ -18,13 +13,10 @@ from scipy.signal import butter, filtfilt
 
 def selectchannels(data, channels):
     if data.ndim == 2:
-        # Single trial: (n_channels, n_samples)
         selecteddata = data[channels]
     elif data.ndim == 3:
-        # Multiple trials stacked: (n_trials, n_channels, n_samples)
         selecteddata = data[:, channels]
     elif data.ndim == 1:
-        # Object array of trials - process each individually
         selecteddata = np.empty(len(data), dtype=object)
         for i, trial in enumerate(data):
             selecteddata[i] = trial[channels]

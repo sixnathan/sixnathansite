@@ -1,11 +1,6 @@
 export default function Classifier() {
   return (
     <div className="space-y-8">
-      <div>
-        <a href="/prk/natmood" className="text-sm text-muted hover:text-accent">
-          ← back to natmood
-        </a>
-      </div>
       <section>
         <h1 className="text-3xl font-bold mb-4">classifier</h1>
         <time className="text-sm text-muted">2025-12-08</time>
