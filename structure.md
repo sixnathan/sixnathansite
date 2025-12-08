@@ -1,0 +1,592 @@
+# Codebase Structure Documentation
+
+## System Instructions
+
+**IMPORTANT**: This file documents the entire codebase structure. When the user provides ANY prompt that results in changes to the codebase:
+
+1. **Update this document** to reflect the changes made
+2. **Commit all changes to git** with a descriptive message
+3. **Push to the remote repository**
+
+This ensures the documentation stays current and all changes are versioned.
+
+---
+
+## Project Overview
+
+**sixnathan** is a personal portfolio/blog website built with Next.js 16, showcasing machine learning projects, EEG signal processing work, blog posts, and contact information. The site is statically generated and deployed on Cloudflare Pages.
+
+**Technology Stack**:
+- Framework: Next.js 16.0.5 (App Router, Static Export)
+- Language: TypeScript 5
+- Styling: Tailwind CSS 4 + PostCSS
+- Content: MDX with gray-matter for frontmatter
+- Fonts: Geist (Sans + Mono) from Google Fonts
+- Deployment: Cloudflare Pages (static HTML/CSS/JS)
+
+---
+
+## Directory Structure
+
+```
+/Users/natkarri/Desktop/sixnathan/
+├── README.md                      # Next.js boilerplate documentation
+├── GUIDE.md                       # User guide for content management
+├── structure.md                   # THIS FILE - Complete codebase documentation
+├── package.json                   # Dependencies and scripts
+├── package-lock.json              # Locked dependency versions
+├── tsconfig.json                  # TypeScript configuration
+├── next.config.ts                 # Next.js config (static export)
+├── next-env.d.ts                  # Next.js TypeScript declarations
+├── postcss.config.mjs             # Tailwind CSS integration
+├── eslint.config.mjs              # ESLint rules
+├── wrangler.json                  # Cloudflare Pages deployment config
+├── .gitignore                     # Git ignore patterns
+├── linear_regression.py           # Standalone Python ML example
+│
+├── /src/                          # Source code
+│   ├── /app/                      # Next.js App Router pages
+│   │   ├── page.tsx              # Home page (/)
+│   │   ├── layout.tsx            # Root layout with navigation
+│   │   ├── globals.css           # Global styles + Tailwind config
+│   │   │
+│   │   ├── /prk/                 # Projects section
+│   │   │   ├── page.tsx          # Projects listing
+│   │   │   ├── /natmood/         # EEG emotion classification
+│   │   │   │   ├── page.tsx      # natmood overview
+│   │   │   │   ├── /preprocessing/
+│   │   │   │   │   └── page.tsx  # Signal filtering & windowing
+│   │   │   │   ├── /features/
+│   │   │   │   │   └── page.tsx  # Feature extraction code
+│   │   │   │   ├── /dataloader/
+│   │   │   │   │   └── page.tsx  # DREAMER dataset loader
+│   │   │   │   └── /classifier/
+│   │   │   │       └── page.tsx  # Random Forest classifier
+│   │   │   └── /natlearn/        # ML library from scratch
+│   │   │       ├── page.tsx      # natlearn overview
+│   │   │       ├── /linreg/
+│   │   │       │   └── page.tsx  # Linear regression
+│   │   │       └── /logreg/
+│   │   │           └── page.tsx  # Logistic regression
+│   │   │
+│   │   ├── /raj/                 # Blog/thoughts section
+│   │   │   ├── page.tsx          # Blog post listing
+│   │   │   └── /[slug]/
+│   │   │       └── page.tsx      # Individual blog post
+│   │   │
+│   │   ├── /sav/                 # Gallery
+│   │   │   └── page.tsx          # Image gallery (empty)
+│   │   │
+│   │   └── /tom/                 # Contact
+│   │       └── page.tsx          # Contact information
+│   │
+│   ├── /components/
+│   │   └── Navigation.tsx        # Client-side navigation
+│   │
+│   └── /lib/
+│       └── posts.ts              # Content loading utilities
+│
+├── /content/                      # Blog content (MDX)
+│   ├── /posts/
+│   │   ├── hello-world.mdx       # Published blog post
+│   │   └── centaurs.mdx.hidden   # Archived post
+│   └── /reading/                 # Reading links (empty)
+│
+├── /public/                       # Static assets
+│   ├── favicon.png               # Site favicon (2.3 MB)
+│   ├── file.svg                  # Unused Next.js defaults
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   ├── window.svg
+│   └── /images/
+│       ├── background.png        # Background image (2.1 MB)
+│       └── /gallery/             # Gallery images (empty)
+│
+├── /binaryclassifier/             # Python ML project
+│   ├── main.py                   # Complete pipeline orchestrator
+│   ├── project.md                # Detailed project specification
+│   ├── project2.md               # Additional documentation
+│   ├── record.md                 # Project notes
+│   ├── /data/
+│   │   └── DREAMER.mat           # EEG dataset (not in git)
+│   ├── /src/
+│   │   ├── dataloader.py         # Dataset loading
+│   │   ├── preprocessing.py      # Signal processing
+│   │   ├── features.py           # Feature extraction
+│   │   └── classifier.py         # Random Forest training
+│   └── /venv/                    # Python virtual environment
+│
+├── /.git/                         # Git repository
+├── /.next/                        # Next.js build cache
+├── /out/                          # Static build output
+└── /node_modules/                 # npm dependencies
+```
+
+---
+
+## Core Application Files
+
+### `/src/app/layout.tsx`
+**Purpose**: Root layout wrapper for all pages
+
+**Key Features**:
+- Imports Geist font family from Google Fonts
+- Metadata: title "sixnathan", description "cry your eyes out"
+- Renders Navigation component in header
+- Responsive container with max-w-2xl
+- Favicon: `/favicon.png`
+
+**Color Variables** (defined in globals.css):
+```css
+--background: #FFFDD0  /* Cream */
+--foreground: #9966CC  /* Purple */
+--muted: #B19CD9       /* Light purple */
+--accent: #8B4789      /* Dark purple */
+```
+
+### `/src/app/page.tsx`
+**Purpose**: Home page (/)
+
+**Content**:
+- Title: "sixnathan"
+- Quote: "why not you?"
+- Tagline: "its called an addiction."
+
+### `/src/components/Navigation.tsx`
+**Type**: Client component (`"use client"`)
+
+**Navigation Links**:
+- `/` - home
+- `/prk` - projects
+- `/sav` - gallery
+- `/raj` - thoughts
+- `/tom` - contact
+
+**Features**:
+- Active link highlighting using `usePathname()`
+- Hover transitions
+- Responsive layout
+
+### `/src/lib/posts.ts`
+**Purpose**: Content management utilities
+
+**Exports**:
+- `getAllPosts()` - Array of blog posts from `content/posts/*.mdx`
+- `getPostBySlug(slug)` - Fetches individual post with content
+- `getAllPostSlugs()` - For static generation
+- `getAllReading()` - Reading links from `content/reading/*.mdx`
+- `getAllBlogItems()` - Combined posts + reading, sorted by date
+
+**Dependencies**: gray-matter for MDX frontmatter parsing
+
+---
+
+## Routing Structure
+
+### Projects Section (`/prk`)
+
+#### `/prk` - Projects Overview
+**File**: `src/app/prk/page.tsx`
+
+**Projects Listed**:
+1. **natmood** - Binary valence classifier using Random Forest, validated on DREAMER, adaptable to Muse 4. Primary neurological marker for positive/neutral/negative emotion. Extracts 9 features per channel while trained on four channels.
+2. **natlearn** - Machine learning library built from scratch
+
+#### `/prk/natmood` - EEG Emotion Classification Project
+**File**: `src/app/prk/natmood/page.tsx`
+
+**Modules**:
+1. **main** - Complete pipeline orchestrator tying all modules together
+   - File: `src/app/prk/natmood/main/page.tsx`
+   - Code: Full pipeline from data loading to model evaluation
+
+2. **preprocessing** - Bandpass filtering and windowing for EEG signals
+   - File: `src/app/prk/natmood/preprocessing/page.tsx`
+   - Code: Channel selection, butterworth bandpass filter, segmentation
+
+3. **features** - Band powers, Hjorth parameters, and Shannon entropy extraction
+   - File: `src/app/prk/natmood/features/page.tsx`
+   - Code: PSD computation, 5 frequency bands, Hjorth params, entropy
+
+4. **dataloader** - DREAMER dataset loader for EEG valence classification
+   - File: `src/app/prk/natmood/dataloader/page.tsx`
+   - Code: MATLAB .mat file loading, 23 participants, 18 videos each
+
+5. **classifier** - Random Forest training and feature selection
+   - File: `src/app/prk/natmood/classifier/page.tsx`
+   - Code: Label conversion, correlation-based selection, RF training
+
+**All modules dated**: 2025-12-08
+
+#### `/prk/natlearn` - ML Library From Scratch
+**File**: `src/app/prk/natlearn/page.tsx`
+
+**Algorithms**:
+1. **linreg** (2025-12-02) - "its just a guessing game"
+   - File: `src/app/prk/natlearn/linreg/page.tsx`
+   - Code: LinearRegression class with hypothesis, cost, gradient descent
+
+2. **logreg** (2025-12-04) - "forgot to clip sigmoid but oh well"
+   - File: `src/app/prk/natlearn/logreg/page.tsx`
+   - Code: LogisticRegression class with sigmoid, cost, gradient descent
+
+### Blog Section (`/raj`)
+
+#### `/raj` - Blog Listing
+**File**: `src/app/raj/page.tsx`
+
+**Features**:
+- Displays all blog items (posts + reading links)
+- Posts: Internal links to `/raj/[slug]`
+- Reading links: External with ↗ icon
+- Sorted by date descending
+
+#### `/raj/[slug]` - Individual Blog Post
+**File**: `src/app/raj/[slug]/page.tsx`
+
+**Features**:
+- Dynamic routing with `generateStaticParams()`
+- Custom markdown renderer (manual parsing):
+  - `##` and `###` headings
+  - Bullet points (`-`)
+  - Code blocks (triple backticks)
+  - Bold text (`**text**`)
+  - Inline code (single backticks)
+- Back link to `/raj`
+- Shows title and date
+
+### Other Sections
+
+#### `/sav` - Gallery
+**File**: `src/app/sav/page.tsx`
+**Status**: Empty, grid layout ready for images
+
+#### `/tom` - Contact
+**File**: `src/app/tom/page.tsx`
+**Content**: Email link (`mailto:dev@sixnathan.com`)
+
+---
+
+## Content Management
+
+### Blog Posts (`/content/posts/*.mdx`)
+
+**Format**: MDX with YAML frontmatter
+
+**Required Fields**:
+- `title` - Post title
+- `date` - YYYY-MM-DD format for sorting
+
+**Optional Fields**:
+- `description` - Listing description
+
+**Example**:
+```mdx
+---
+title: "hey world"
+date: "2025-11-28"
+---
+
+life is all about playing around and having fun.
+
+best,
+
+nathan
+```
+
+**Hidden Posts**: Files ending in `.hidden` are ignored
+
+**Current Posts**:
+- `hello-world.mdx` (published)
+- `centaurs.mdx.hidden` (archived)
+
+### Reading Links (`/content/reading/*.mdx`)
+
+**Status**: Directory exists but empty
+
+**Expected Format**:
+```mdx
+---
+title: "Article Title"
+link: "https://example.com"
+date: "2025-11-28"
+comment: "Why this is interesting"
+---
+```
+
+---
+
+## Python Projects
+
+### `/binaryclassifier/` - EEG Emotion Classification Pipeline
+
+**Purpose**: Complete machine learning pipeline for binary/ternary valence classification using EEG signals from the DREAMER dataset.
+
+#### `main.py` - Pipeline Orchestrator
+**Function**: `runpipeline(datapath)`
+
+**Pipeline Steps**:
+1. Load DREAMER dataset (414 trials: 23 participants × 18 videos)
+2. Select 4 Muse-equivalent channels: [1, 4, 9, 12]
+3. Apply bandpass filter (0.5-50 Hz, 128 Hz sampling rate)
+4. Extract features (9 per channel × 4 channels = 36 features)
+5. Convert valence labels to 3 classes (negative=0, neutral=1, positive=2)
+6. Select top 20 features by correlation
+7. Train Random Forest classifier (100 trees, 80/20 split)
+8. Report accuracy, F1 score, confusion matrix
+
+**Output**: Dictionary with accuracy, F1, confusion matrix, trained model
+
+#### `src/dataloader.py`
+**Function**: `loaddreamer(filepath)`
+
+**Returns**:
+- `eegdata` - Object array of EEG trials (n_channels, n_samples)
+- `valencelabels` - Valence ratings (1-5 scale)
+- `arousallabels` - Arousal ratings (1-5 scale)
+
+**Data Structure**:
+- 23 participants
+- 18 video stimuli per participant
+- 14 EEG channels per trial
+- 128 Hz sampling rate
+- Variable trial lengths
+
+#### `src/preprocessing.py`
+**Functions**:
+- `selectchannels(data, channels)` - Extract specific EEG channels
+- `bandpassfilter(data, lowcut, highcut, fs, order=4)` - Butterworth bandpass filter
+- `segmentintowindows(data, windowsize, overlap=0)` - Fixed-size windowing
+
+**Filter Specs**:
+- Type: Butterworth 4th order
+- Passband: 0.5-50 Hz
+- Removes DC drift and high-frequency noise
+
+#### `src/features.py`
+**Feature Extraction** (9 features per channel):
+
+**Band Powers** (5 features):
+- Delta: 0.5-4 Hz
+- Theta: 4-8 Hz
+- Alpha: 8-13 Hz
+- Beta: 13-30 Hz
+- Gamma: 30-50 Hz
+
+**Hjorth Parameters** (3 features):
+- Activity: Signal variance
+- Mobility: Mean frequency
+- Complexity: Similarity to sine wave
+
+**Shannon Entropy** (1 feature):
+- Signal complexity measure
+
+**Functions**:
+- `computepsd(data, fs)` - Welch's method for PSD
+- `computebandpower(data, fs, band)` - Integrate PSD over band
+- `extractbandpowers(data, fs)` - All 5 bands
+- `hjorthparams(data)` - Activity, mobility, complexity
+- `shannonentropy(data, nbins=50)` - Histogram-based entropy
+- `extractfeaturessinglewindow(window, fs)` - Single window, single channel
+- `extractfeaturestrial(trialdata, fs, windowsize)` - Average across windows
+- `buildfeaturematrix(eegdata, fs, windowsize)` - All trials
+
+#### `src/classifier.py`
+**Functions**:
+- `converttolabels(labels)` - Map 1-5 scale to 3 classes (0=negative, 1=neutral, 2=positive)
+- `selectfeatures(X, y, k)` - Correlation-based feature selection
+- `traineval(X, y, nestimators=100, testsize=0.2, randomstate=42)` - Train Random Forest
+
+**Classifier**:
+- Algorithm: Random Forest (sklearn)
+- Trees: 100
+- Split: 80% train, 20% test
+- Metrics: Accuracy, weighted F1 score, confusion matrix
+
+**Dependencies**:
+- numpy
+- scipy (signal processing, integration, MATLAB file loading)
+- scikit-learn (Random Forest, metrics, train/test split)
+
+### `/linear_regression.py` - Educational Example
+
+**Class**: `LinearRegression`
+
+**Methods**:
+- `hypo(X)` - Hypothesis: X @ theta
+- `cost(X, y, h)` - MSE loss
+- `graddec(X, y, rate, iterations)` - Gradient descent with loss printing
+
+---
+
+## Configuration Files
+
+### `package.json`
+**Scripts**:
+- `dev` - Start development server
+- `build` - Build static site to `/out`
+- `start` - Start production server
+- `lint` - Run ESLint
+
+**Key Dependencies**:
+- next: 16.0.5
+- react: 19.0.0
+- react-dom: 19.0.0
+- tailwindcss: 4.0.15
+- gray-matter: 4.0.3 (MDX frontmatter parsing)
+
+### `tsconfig.json`
+**Configuration**:
+- Strict mode enabled
+- Target: ES2017
+- Path alias: `@/*` → `./src/*`
+- Module resolution: bundler
+
+### `next.config.ts`
+**Settings**:
+- `output: "export"` - Static site generation
+- `images.unoptimized: true` - Disable Next.js image optimization for static export
+
+### `postcss.config.mjs`
+**Plugins**:
+- `@tailwindcss/postcss` - Tailwind CSS integration
+
+### `eslint.config.mjs`
+**Extends**:
+- `next/core-web-vitals`
+- `next/typescript`
+
+### `wrangler.json`
+**Cloudflare Pages**:
+- Serves static files from `/out`
+- Zero-cost hosting
+
+---
+
+## Styling System
+
+### Color Scheme
+- Background: `#FFFDD0` (cream)
+- Foreground: `#9966CC` (purple)
+- Muted: `#B19CD9` (light purple)
+- Accent: `#8B4789` (dark purple)
+
+### Typography
+- Body: Geist Sans
+- Code: Geist Mono
+- Sizes: Responsive with Tailwind utilities
+
+### Layout
+- Max width: `max-w-2xl` (42rem)
+- Padding: `p-4` to `p-8`
+- Spacing: `space-y-6` to `space-y-8`
+
+### Components
+- Borders: `border-zinc-400` with `hover:border-zinc-300`
+- Cards: Padding + border + rounded corners + hover transitions
+- Code blocks: `<pre><code>` with border and overflow-x-auto
+
+---
+
+## Build & Deployment
+
+### Development
+```bash
+npm run dev
+```
+Starts dev server on http://localhost:3000
+
+### Production Build
+```bash
+npm run build
+```
+Generates static files in `/out/` directory
+
+### Deployment
+- Platform: Cloudflare Pages
+- Trigger: Git push to main branch
+- Build command: `npm run build`
+- Output directory: `/out`
+
+### Static Features
+- No server-side rendering
+- No API routes
+- All content pre-rendered at build time
+- Instant page loads
+
+---
+
+## Git Workflow
+
+**Repository**: `/Users/natkarri/Desktop/sixnathan/.git`
+
+**Branch**: `main`
+
+**Ignored Files** (`.gitignore`):
+- `/node_modules`
+- `/.next`
+- `/out`
+- `.DS_Store`
+- `*.log`
+- `/binaryclassifier/venv`
+- `/binaryclassifier/data/DREAMER.mat` (large file)
+
+**Commit Convention**:
+After any codebase change, commit with descriptive message and push to remote.
+
+---
+
+## Important Notes
+
+1. **Content Policy**: All public-facing text must be human-written (per `GUIDE.md`)
+2. **Privacy**: Strip EXIF metadata from images before publishing
+3. **MDX Parsing**: Custom implementation, not full MDX/JSX support
+4. **Static Only**: No database, no server-side state
+5. **Slug URLs**: Derived from filename (e.g., `hello-world.mdx` → `/raj/hello-world`)
+6. **Hidden Content**: Files ending in `.hidden` are excluded from build
+
+---
+
+## Future Additions
+
+**When adding new content/features**:
+
+1. **New Project**: Add to `src/app/prk/[project-name]/page.tsx` and list in `src/app/prk/page.tsx`
+2. **New Algorithm**: Add to `src/app/prk/natlearn/[algorithm]/page.tsx` and list in `src/app/prk/natlearn/page.tsx`
+3. **New Blog Post**: Create `content/posts/[slug].mdx` with frontmatter
+4. **New Reading Link**: Create `content/reading/[slug].mdx` with link field
+5. **Gallery Images**: Add to `public/images/gallery/` and update `src/app/sav/page.tsx`
+
+**Always**:
+- Update this `structure.md` file
+- Commit changes to git
+- Push to remote repository
+
+---
+
+## URL Map
+
+| URL | File | Purpose |
+|-----|------|---------|
+| `/` | `src/app/page.tsx` | Home |
+| `/prk` | `src/app/prk/page.tsx` | Projects listing |
+| `/prk/natmood` | `src/app/prk/natmood/page.tsx` | EEG project hub |
+| `/prk/natmood/main` | `src/app/prk/natmood/main/page.tsx` | Pipeline orchestrator |
+| `/prk/natmood/preprocessing` | `src/app/prk/natmood/preprocessing/page.tsx` | Preprocessing code |
+| `/prk/natmood/features` | `src/app/prk/natmood/features/page.tsx` | Feature extraction |
+| `/prk/natmood/dataloader` | `src/app/prk/natmood/dataloader/page.tsx` | Dataset loader |
+| `/prk/natmood/classifier` | `src/app/prk/natmood/classifier/page.tsx` | Classifier |
+| `/prk/natlearn` | `src/app/prk/natlearn/page.tsx` | ML library hub |
+| `/prk/natlearn/linreg` | `src/app/prk/natlearn/linreg/page.tsx` | Linear regression |
+| `/prk/natlearn/logreg` | `src/app/prk/natlearn/logreg/page.tsx` | Logistic regression |
+| `/raj` | `src/app/raj/page.tsx` | Blog listing |
+| `/raj/[slug]` | `src/app/raj/[slug]/page.tsx` | Individual blog post |
+| `/sav` | `src/app/sav/page.tsx` | Gallery |
+| `/tom` | `src/app/tom/page.tsx` | Contact |
+
+---
+
+*Last updated: 2025-12-08*
+*Total files documented: 50+*
+*Lines of documentation: 700+*

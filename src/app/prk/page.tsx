@@ -6,6 +6,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "natmood",
+    description: "binary valence classifier using randomforest validated on dreamer and adaptable to muse 4. primary neurological marker for positive/neutral/negative emotion. extracts 9 features per channel while trained on four channels.",
+    link: "/prk/natmood",
+  },
+  {
     title: "natlearn",
     description: "a machine learning library built from scratch",
     link: "/prk/natlearn",
