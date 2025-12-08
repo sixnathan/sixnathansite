@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <div className="max-w-2xl mx-auto px-6 py-12 flex-1 w-full">
+        <div className="max-w-5xl mx-auto px-6 py-12 flex-1 w-full">
           <header className="mb-16">
             <Navigation />
           </header>

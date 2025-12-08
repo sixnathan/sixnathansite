@@ -12,6 +12,28 @@ This ensures the documentation stays current and all changes are versioned.
 
 ---
 
+## User Preferences
+
+**Recorded preferences for this project**:
+
+1. **Code Snippet Display**: No horizontal scrollbar - increase container width instead of using `overflow-x-auto`
+   - Main container width: `max-w-5xl` (changed from `max-w-2xl`)
+   - Code blocks should display without horizontal scrolling
+
+2. **Project Descriptions**:
+   - Keep project card descriptions concise on listing pages
+   - Full technical details should live on the individual project pages
+   - Example: natmood shows "a binary valence mood classifier built 'mostly' from scratch" on `/prk`, with full details on `/prk/natmood`
+
+3. **Navigation**:
+   - No "back to projects" links on project pages
+
+4. **Git Workflow**:
+   - Commit and push after every codebase change
+   - Use descriptive commit messages
+
+---
+
 ## Project Overview
 
 **sixnathan** is a personal portfolio/blog website built with Next.js 16, showcasing machine learning projects, EEG signal processing work, blog posts, and contact information. The site is statically generated and deployed on Cloudflare Pages.
@@ -480,7 +502,7 @@ comment: "Why this is interesting"
 - Sizes: Responsive with Tailwind utilities
 
 ### Layout
-- Max width: `max-w-2xl` (42rem)
+- Max width: `max-w-5xl` (64rem) - increased for code snippet readability
 - Padding: `p-4` to `p-8`
 - Spacing: `space-y-6` to `space-y-8`
 
