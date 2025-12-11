@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python projects
+/messyprojects/binaryclassifier/venv/
+/messyprojects/binaryclassifier/data/DREAMER.mat

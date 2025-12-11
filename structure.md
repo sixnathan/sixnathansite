@@ -66,7 +66,22 @@ This ensures the documentation stays current and all changes are versioned.
 ├── eslint.config.mjs              # ESLint rules
 ├── wrangler.json                  # Cloudflare Pages deployment config
 ├── .gitignore                     # Git ignore patterns
-├── linear_regression.py           # Standalone Python ML example
+│
+├── /messyprojects/                # Python projects
+│   ├── linear_regression.py      # Standalone Python ML example
+│   └── /binaryclassifier/        # EEG emotion classification
+│       ├── main.py               # Complete pipeline orchestrator
+│       ├── project.md            # Detailed project specification
+│       ├── project2.md           # Additional documentation
+│       ├── record.md             # Project notes
+│       ├── /data/
+│       │   └── DREAMER.mat       # EEG dataset (not in git)
+│       ├── /src/
+│       │   ├── dataloader.py     # Dataset loading
+│       │   ├── preprocessing.py  # Signal processing
+│       │   ├── features.py       # Feature extraction
+│       │   └── classifier.py     # Random Forest training
+│       └── /venv/                # Python virtual environment
 │
 ├── /src/                          # Source code
 │   ├── /app/                      # Next.js App Router pages
@@ -126,20 +141,6 @@ This ensures the documentation stays current and all changes are versioned.
 │   └── /images/
 │       ├── background.png        # Background image (2.1 MB)
 │       └── /gallery/             # Gallery images (empty)
-│
-├── /binaryclassifier/             # Python ML project
-│   ├── main.py                   # Complete pipeline orchestrator
-│   ├── project.md                # Detailed project specification
-│   ├── project2.md               # Additional documentation
-│   ├── record.md                 # Project notes
-│   ├── /data/
-│   │   └── DREAMER.mat           # EEG dataset (not in git)
-│   ├── /src/
-│   │   ├── dataloader.py         # Dataset loading
-│   │   ├── preprocessing.py      # Signal processing
-│   │   ├── features.py           # Feature extraction
-│   │   └── classifier.py         # Random Forest training
-│   └── /venv/                    # Python virtual environment
 │
 ├── /.git/                         # Git repository
 ├── /.next/                        # Next.js build cache
@@ -345,7 +346,7 @@ comment: "Why this is interesting"
 
 ## Python Projects
 
-### `/binaryclassifier/` - EEG Emotion Classification Pipeline
+### `/messyprojects/binaryclassifier/` - EEG Emotion Classification Pipeline
 
 **Purpose**: Complete machine learning pipeline for binary/ternary valence classification using EEG signals from the DREAMER dataset.
 
@@ -435,7 +436,7 @@ comment: "Why this is interesting"
 - scipy (signal processing, integration, MATLAB file loading)
 - scikit-learn (Random Forest, metrics, train/test split)
 
-### `/linear_regression.py` - Educational Example
+### `/messyprojects/linear_regression.py` - Educational Example
 
 **Class**: `LinearRegression`
 
@@ -555,8 +556,8 @@ Generates static files in `/out/` directory
 - `/out`
 - `.DS_Store`
 - `*.log`
-- `/binaryclassifier/venv`
-- `/binaryclassifier/data/DREAMER.mat` (large file)
+- `/messyprojects/binaryclassifier/venv`
+- `/messyprojects/binaryclassifier/data/DREAMER.mat` (large file)
 
 **Commit Convention**:
 After any codebase change, commit with descriptive message and push to remote.
