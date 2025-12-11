@@ -132,12 +132,15 @@ This ensures the documentation stays current and all changes are versioned.
 │   └── /reading/                 # Reading links (empty)
 │
 ├── /public/                       # Static assets
+│   ├── _headers                  # Cloudflare Pages security headers
 │   ├── favicon.png               # Site favicon (2.3 MB)
 │   ├── file.svg                  # Unused Next.js defaults
 │   ├── globe.svg
 │   ├── next.svg
 │   ├── vercel.svg
 │   ├── window.svg
+│   ├── /.well-known/
+│   │   └── security.txt          # Security contact information
 │   └── /images/
 │       ├── background.png        # Background image (2.1 MB)
 │       └── /gallery/             # Gallery images (empty)
