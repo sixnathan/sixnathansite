@@ -176,7 +176,6 @@ This ensures the documentation stays current and all changes are versioned.
 **Content**:
 - Title: "sixnathan"
 - Quote: "why not you?"
-- Tagline: "its called an addiction."
 
 ### `/src/components/Navigation.tsx`
 **Type**: Client component (`"use client"`)
@@ -215,13 +214,13 @@ This ensures the documentation stays current and all changes are versioned.
 **File**: `src/app/prk/page.tsx`
 
 **Projects Listed**:
-1. **natmood** - A binary valence mood classifier built 'mostly' from scratch
+1. **natmood** - A binary valence mood classifier built from scratch
 2. **natlearn** - Machine learning library built from scratch
 
 #### `/prk/natmood` - EEG Emotion Classification Project
 **File**: `src/app/prk/natmood/page.tsx`
 
-**Description**: A binary valence mood classifier built 'mostly' from scratch. Binary valence classifier using randomforest validated on dreamer and adaptable to muse 4. Primary neurological marker for positive/neutral/negative emotion. Extracts 9 features per channel while trained on four channels.
+**Description**: A binary valence mood classifier built from scratch. DREAMER was a bad pick. Binary valence classifier using randomforest validated on dreamer and adaptable to muse 4. Primary neurological marker for positive/neutral/negative emotion. Extracts 9 features per channel while trained on four channels.
 
 **Modules**:
 1. **main** - Complete pipeline orchestrator tying all modules together

@@ -44,10 +44,10 @@ export default function Natmood() {
       <section>
         <h1 className="text-3xl font-bold mb-4">natmood</h1>
         <p className="text-muted text-sm mb-4">
-          a binary valence mood classifier built 'mostly' from scratch
+          a binary valence mood classifier built from scratch
         </p>
         <p className="text-sm">
-          binary valence classifier using randomforest validated on dreamer and adaptable to muse 4. primary neurological marker for positive/neutral/negative emotion. extracts 9 features per channel while trained on four channels.
+          DREAMER was a bad pick. binary valence classifier using randomforest validated on dreamer and adaptable to muse 4. primary neurological marker for positive/neutral/negative emotion. extracts 9 features per channel while trained on four channels.
         </p>
       </section>
 

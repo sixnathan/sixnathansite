@@ -29,7 +29,7 @@ export default function Natlearn() {
           a machine learning library built from scratch
         </p>
         <p className="text-sm">
-          its unlikely that ill ever be a hardcore machine learning/deep learning engineer, but i feel its pretty important to understand how systems work in order to better make use of them.
+          it takes time.
         </p>
       </section>
 

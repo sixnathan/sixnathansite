@@ -7,13 +7,6 @@ export default function Home() {
           why not you?
         </p>
       </section>
-
-      <section className="space-y-4">
-        <p className="text-muted leading-relaxed">
-          its called an addiction.
-        </p>
-      </section>
-
     </div>
   );
 }

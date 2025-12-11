@@ -7,7 +7,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "natmood",
-    description: "a binary valence mood classifier built 'mostly' from scratch",
+    description: "a binary valence mood classifier built from scratch",
     link: "/prk/natmood",
   },
   {
