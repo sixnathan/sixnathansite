@@ -223,9 +223,9 @@ This ensures the documentation stays current and all changes are versioned.
 **File**: `src/app/prk/page.tsx`
 
 **Projects Listed**:
-1. **natmood** - A binary valence mood classifier built from scratch
-2. **natlearn** - Machine learning library built from scratch
-3. **oneshotlstm** - Called oneshot because i tried to make it in one night
+1. **oneshotlstm** - Called oneshot because i tried to make it in one night
+2. **natmood** - A binary valence mood classifier built from scratch
+3. **natlearn** - Machine learning library built from scratch
 
 #### `/prk/natmood` - EEG Emotion Classification Project
 **File**: `src/app/prk/natmood/page.tsx`
@@ -314,7 +314,10 @@ This ensures the documentation stays current and all changes are versioned.
 
 #### `/tom` - Contact
 **File**: `src/app/tom/page.tsx`
-**Content**: Email link (`mailto:dev@sixnathan.com`)
+**Content**:
+- Email: dev@sixnathan.com
+- GitHub: https://github.com/sixnathan
+- Twitter: https://twitter.com/sixnathen (@sixnathen)
 
 ---
 

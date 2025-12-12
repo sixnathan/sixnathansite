@@ -8,6 +8,14 @@ const socialLinks: SocialLink[] = [
     label: "email",
     href: "mailto:dev@sixnathan.com",
   },
+  {
+    label: "github",
+    href: "https://github.com/sixnathan",
+  },
+  {
+    label: "twitter",
+    href: "https://twitter.com/sixnathen",
+  },
 ];
 
 export default function Contact() {

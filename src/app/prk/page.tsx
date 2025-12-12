@@ -6,6 +6,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "oneshotlstm",
+    description: "called oneshot because i tried to make it in one night",
+    link: "/prk/oneshotlstm",
+  },
+  {
     title: "natmood",
     description: "a binary valence mood classifier built from scratch",
     link: "/prk/natmood",
@@ -14,11 +19,6 @@ const projects: Project[] = [
     title: "natlearn",
     description: "a machine learning library built from scratch",
     link: "/prk/natlearn",
-  },
-  {
-    title: "oneshotlstm",
-    description: "called oneshot because i tried to make it in one night",
-    link: "/prk/oneshotlstm",
   },
 ];
 
