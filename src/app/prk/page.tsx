@@ -15,6 +15,11 @@ const projects: Project[] = [
     description: "a machine learning library built from scratch",
     link: "/prk/natlearn",
   },
+  {
+    title: "oneshotlstm",
+    description: "called oneshot because i tried to make it in one night",
+    link: "/prk/oneshotlstm",
+  },
 ];
 
 export default function Projects() {

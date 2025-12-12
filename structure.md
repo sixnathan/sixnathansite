@@ -101,12 +101,18 @@ This ensures the documentation stays current and all changes are versioned.
 │   │   │   │   │   └── page.tsx  # DREAMER dataset loader
 │   │   │   │   └── /classifier/
 │   │   │   │       └── page.tsx  # Random Forest classifier
-│   │   │   └── /natlearn/        # ML library from scratch
-│   │   │       ├── page.tsx      # natlearn overview
-│   │   │       ├── /linreg/
-│   │   │       │   └── page.tsx  # Linear regression
-│   │   │       └── /logreg/
-│   │   │           └── page.tsx  # Logistic regression
+│   │   │   ├── /natlearn/        # ML library from scratch
+│   │   │   │   ├── page.tsx      # natlearn overview
+│   │   │   │   ├── /linreg/
+│   │   │   │   │   └── page.tsx  # Linear regression
+│   │   │   │   └── /logreg/
+│   │   │   │       └── page.tsx  # Logistic regression
+│   │   │   └── /oneshotlstm/     # LSTM from scratch
+│   │   │       ├── page.tsx      # oneshotlstm overview
+│   │   │       ├── /features/
+│   │   │       │   └── page.tsx  # LSTM forward/backward pass
+│   │   │       └── /main/
+│   │   │           └── page.tsx  # Training loop
 │   │   │
 │   │   ├── /raj/                 # Blog/thoughts section
 │   │   │   ├── page.tsx          # Blog post listing
@@ -219,6 +225,7 @@ This ensures the documentation stays current and all changes are versioned.
 **Projects Listed**:
 1. **natmood** - A binary valence mood classifier built from scratch
 2. **natlearn** - Machine learning library built from scratch
+3. **oneshotlstm** - Called oneshot because i tried to make it in one night
 
 #### `/prk/natmood` - EEG Emotion Classification Project
 **File**: `src/app/prk/natmood/page.tsx`
@@ -259,6 +266,20 @@ This ensures the documentation stays current and all changes are versioned.
 2. **logreg** (2025-12-04) - "forgot to clip sigmoid but oh well"
    - File: `src/app/prk/natlearn/logreg/page.tsx`
    - Code: LogisticRegression class with sigmoid, cost, gradient descent
+
+#### `/prk/oneshotlstm` - LSTM From Scratch
+**File**: `src/app/prk/oneshotlstm/page.tsx`
+
+**Description**: Called oneshot because i tried to make it in one night. I tried making this in one night but fell asleep. Pretty cool implementation of LSTM without pytorch.
+
+**Modules**:
+1. **features** (2025-12-10) - LSTM implementation with forward and backward pass
+   - File: `src/app/prk/oneshotlstm/features/page.tsx`
+   - Code: Full LSTM cell implementation with gates, backpropagation through time
+
+2. **main** (2025-12-10) - Training loop orchestrator
+   - File: `src/app/prk/oneshotlstm/main/page.tsx`
+   - Code: Training setup with random data (10 sequences, 425 input size, 64 hidden units)
 
 ### Blog Section (`/raj`)
 
@@ -609,6 +630,9 @@ After any codebase change, commit with descriptive message and push to remote.
 | `/prk/natlearn` | `src/app/prk/natlearn/page.tsx` | ML library hub |
 | `/prk/natlearn/linreg` | `src/app/prk/natlearn/linreg/page.tsx` | Linear regression |
 | `/prk/natlearn/logreg` | `src/app/prk/natlearn/logreg/page.tsx` | Logistic regression |
+| `/prk/oneshotlstm` | `src/app/prk/oneshotlstm/page.tsx` | LSTM from scratch hub |
+| `/prk/oneshotlstm/features` | `src/app/prk/oneshotlstm/features/page.tsx` | LSTM implementation |
+| `/prk/oneshotlstm/main` | `src/app/prk/oneshotlstm/main/page.tsx` | Training loop |
 | `/raj` | `src/app/raj/page.tsx` | Blog listing |
 | `/raj/[slug]` | `src/app/raj/[slug]/page.tsx` | Individual blog post |
 | `/sav` | `src/app/sav/page.tsx` | Gallery |
