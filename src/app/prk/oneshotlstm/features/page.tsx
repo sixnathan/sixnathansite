@@ -1,6 +1,11 @@
 export default function FeaturesModule() {
   return (
     <div className="space-y-8">
+      <div>
+        <a href="/prk/oneshotlstm" className="text-sm text-muted hover:text-accent">
+          ← back to oneshotlstm
+        </a>
+      </div>
       <section>
         <h1 className="text-3xl font-bold mb-4">features</h1>
         <p className="text-muted text-sm mb-4">lstm implementation with forward and backward pass</p>

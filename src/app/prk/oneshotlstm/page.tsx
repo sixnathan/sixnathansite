@@ -14,7 +14,7 @@ const modules: Module[] = [
   },
   {
     title: "main",
-    description: "training loop orchestrator",
+    description: "training loop",
     link: "/prk/oneshotlstm/main",
     date: "2025-12-10",
   },

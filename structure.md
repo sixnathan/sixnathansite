@@ -277,7 +277,7 @@ This ensures the documentation stays current and all changes are versioned.
    - File: `src/app/prk/oneshotlstm/features/page.tsx`
    - Code: Full LSTM cell implementation with gates, backpropagation through time
 
-2. **main** (2025-12-10) - Training loop orchestrator
+2. **main** (2025-12-10) - Training loop
    - File: `src/app/prk/oneshotlstm/main/page.tsx`
    - Code: Training setup with random data (10 sequences, 425 input size, 64 hidden units)
 

@@ -1,9 +1,14 @@
 export default function MainModule() {
   return (
     <div className="space-y-8">
+      <div>
+        <a href="/prk/oneshotlstm" className="text-sm text-muted hover:text-accent">
+          ← back to oneshotlstm
+        </a>
+      </div>
       <section>
         <h1 className="text-3xl font-bold mb-4">main</h1>
-        <p className="text-muted text-sm mb-4">training loop orchestrator</p>
+        <p className="text-muted text-sm mb-4">training loop</p>
         <time className="text-sm text-muted">2025-12-10</time>
       </section>
 
