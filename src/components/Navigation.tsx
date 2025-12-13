@@ -8,7 +8,7 @@ const navItems = [
   { href: "/prky", label: "projects" },
   { href: "/savL", label: "gallery" },
   { href: "/raja", label: "thoughts" },
-  { href: "/tom", label: "contact" },
+  { href: "/tom&gaz", label: "contact" },
 ];
 
 export default function Navigation() {

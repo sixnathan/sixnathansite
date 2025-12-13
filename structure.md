@@ -124,7 +124,7 @@ This ensures the documentation stays current and all changes are versioned.
 │   │   ├── /savL/                 # Gallery
 │   │   │   └── page.tsx          # Image gallery (empty)
 │   │   │
-│   │   └── /tom/                 # Contact
+│   │   └── /tom&gaz/                 # Contact
 │   │       └── page.tsx          # Contact information
 │   │
 │   ├── /components/
@@ -196,7 +196,7 @@ This ensures the documentation stays current and all changes are versioned.
 - `/prky` - projects
 - `/savL` - gallery
 - `/raja` - thoughts
-- `/tom` - contact
+- `/tom&gaz` - contact
 
 **Features**:
 - Active link highlighting using `usePathname()`
@@ -318,8 +318,8 @@ This ensures the documentation stays current and all changes are versioned.
 **File**: `src/app/savL/page.tsx`
 **Status**: Empty, grid layout ready for images
 
-#### `/tom` - Contact
-**File**: `src/app/tom/page.tsx`
+#### `/tom&gaz` - Contact
+**File**: `src/app/tom&gaz/page.tsx`
 **Content**:
 - Email: dev@sixnathan.com
 - GitHub: https://github.com/sixnathan
@@ -646,7 +646,7 @@ After any codebase change, commit with descriptive message and push to remote.
 | `/raja` | `src/app/raja/page.tsx` | Blog listing |
 | `/raja/[slug]` | `src/app/raja/[slug]/page.tsx` | Individual blog post |
 | `/savL` | `src/app/savL/page.tsx` | Gallery |
-| `/tom` | `src/app/tom/page.tsx` | Contact |
+| `/tom&gaz` | `src/app/tom&gaz/page.tsx` | Contact |
 
 ---
 
