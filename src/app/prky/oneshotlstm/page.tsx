@@ -9,13 +9,13 @@ const modules: Module[] = [
   {
     title: "features",
     description: "lstm implementation with forward and backward pass",
-    link: "/prk/oneshotlstm/features",
+    link: "/prky/oneshotlstm/features",
     date: "2025-12-10",
   },
   {
     title: "main",
     description: "training loop",
-    link: "/prk/oneshotlstm/main",
+    link: "/prky/oneshotlstm/main",
     date: "2025-12-10",
   },
 ];

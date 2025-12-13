@@ -9,19 +9,19 @@ const algorithms: Algorithm[] = [
   {
     title: "kclass",
     description: "decisions decisions hmmmmm",
-    link: "/prk/natlearn/kclass",
+    link: "/prky/natlearn/kclass",
     date: "2025-12-13",
   },
   {
     title: "logreg",
     description: "forgot to clip sigmoid but oh well",
-    link: "/prk/natlearn/logreg",
+    link: "/prky/natlearn/logreg",
     date: "2025-12-04",
   },
   {
     title: "linreg",
     description: "its just a guessing game",
-    link: "/prk/natlearn/linreg",
+    link: "/prky/natlearn/linreg",
     date: "2025-12-02",
   },
 ];

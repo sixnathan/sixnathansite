@@ -9,31 +9,31 @@ const modules: Module[] = [
   {
     title: "main",
     description: "complete pipeline orchestrator tying all modules together",
-    link: "/prk/natmood/main",
+    link: "/prky/natmood/main",
     date: "2025-12-08",
   },
   {
     title: "preprocessing",
     description: "bandpass filtering and windowing for eeg signals",
-    link: "/prk/natmood/preprocessing",
+    link: "/prky/natmood/preprocessing",
     date: "2025-12-08",
   },
   {
     title: "features",
     description: "band powers, hjorth parameters, and shannon entropy extraction",
-    link: "/prk/natmood/features",
+    link: "/prky/natmood/features",
     date: "2025-12-08",
   },
   {
     title: "dataloader",
     description: "dreamer dataset loader for eeg valence classification",
-    link: "/prk/natmood/dataloader",
+    link: "/prky/natmood/dataloader",
     date: "2025-12-08",
   },
   {
     title: "classifier",
     description: "random forest training and feature selection",
-    link: "/prk/natmood/classifier",
+    link: "/prky/natmood/classifier",
     date: "2025-12-08",
   },
 ];
