@@ -186,7 +186,7 @@ This ensures the documentation stays current and all changes are versioned.
 
 **Content**:
 - Title: "sixnathan"
-- Quote: "why not you?"
+- Quote: "why not you"
 
 ### `/src/components/Navigation.tsx`
 **Type**: Client component (`"use client"`)
