@@ -28,7 +28,7 @@ This ensures the documentation stays current and all changes are versioned.
 
 3. **Navigation**:
    - No "back to projects" links on project pages
-   - No "back to natmood" links on module pages
+   - Back arrows on all module pages for easier navigation
 
 4. **Git Workflow**:
    - Commit and push after every codebase change
