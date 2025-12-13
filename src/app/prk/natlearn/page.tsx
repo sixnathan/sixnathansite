@@ -7,6 +7,12 @@ interface Algorithm {
 
 const algorithms: Algorithm[] = [
   {
+    title: "kclass",
+    description: "decisions decisions hmmmmm",
+    link: "/prk/natlearn/kclass",
+    date: "2025-12-13",
+  },
+  {
     title: "logreg",
     description: "forgot to clip sigmoid but oh well",
     link: "/prk/natlearn/logreg",

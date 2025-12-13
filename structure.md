@@ -103,6 +103,8 @@ This ensures the documentation stays current and all changes are versioned.
 │   │   │   │       └── page.tsx  # Random Forest classifier
 │   │   │   ├── /natlearn/        # ML library from scratch
 │   │   │   │   ├── page.tsx      # natlearn overview
+│   │   │   │   ├── /kclass/
+│   │   │   │   │   └── page.tsx  # K-class classification
 │   │   │   │   ├── /linreg/
 │   │   │   │   │   └── page.tsx  # Linear regression
 │   │   │   │   └── /logreg/
@@ -259,13 +261,17 @@ This ensures the documentation stays current and all changes are versioned.
 **File**: `src/app/prk/natlearn/page.tsx`
 
 **Algorithms**:
-1. **linreg** (2025-12-02) - "its just a guessing game"
-   - File: `src/app/prk/natlearn/linreg/page.tsx`
-   - Code: LinearRegression class with hypothesis, cost, gradient descent
+1. **kclass** (2025-12-13) - "decisions decisions hmmmmm"
+   - File: `src/app/prk/natlearn/kclass/page.tsx`
+   - Code: KClassClassification with softmax, cross-entropy loss, gradient descent
 
 2. **logreg** (2025-12-04) - "forgot to clip sigmoid but oh well"
    - File: `src/app/prk/natlearn/logreg/page.tsx`
    - Code: LogisticRegression class with sigmoid, cost, gradient descent
+
+3. **linreg** (2025-12-02) - "its just a guessing game"
+   - File: `src/app/prk/natlearn/linreg/page.tsx`
+   - Code: LinearRegression class with hypothesis, cost, gradient descent
 
 #### `/prk/oneshotlstm` - LSTM From Scratch
 **File**: `src/app/prk/oneshotlstm/page.tsx`
@@ -631,6 +637,7 @@ After any codebase change, commit with descriptive message and push to remote.
 | `/prk/natmood/dataloader` | `src/app/prk/natmood/dataloader/page.tsx` | Dataset loader |
 | `/prk/natmood/classifier` | `src/app/prk/natmood/classifier/page.tsx` | Classifier |
 | `/prk/natlearn` | `src/app/prk/natlearn/page.tsx` | ML library hub |
+| `/prk/natlearn/kclass` | `src/app/prk/natlearn/kclass/page.tsx` | K-class classification |
 | `/prk/natlearn/linreg` | `src/app/prk/natlearn/linreg/page.tsx` | Linear regression |
 | `/prk/natlearn/logreg` | `src/app/prk/natlearn/logreg/page.tsx` | Logistic regression |
 | `/prk/oneshotlstm` | `src/app/prk/oneshotlstm/page.tsx` | LSTM from scratch hub |
