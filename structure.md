@@ -24,7 +24,7 @@ This ensures the documentation stays current and all changes are versioned.
 2. **Project Descriptions**:
    - Keep project card descriptions concise on listing pages
    - Full technical details should live on the individual project pages
-   - Example: natmood shows "a binary valence mood classifier built 'mostly' from scratch" on `/prk`, with full details on `/prk/natmood`
+   - Example: natmood shows "a binary valence mood classifier built 'mostly' from scratch" on `/prky`, with full details on `/prky/natmood`
 
 3. **Navigation**:
    - No "back to projects" links on project pages
@@ -89,7 +89,7 @@ This ensures the documentation stays current and all changes are versioned.
 │   │   ├── layout.tsx            # Root layout with navigation
 │   │   ├── globals.css           # Global styles + Tailwind config
 │   │   │
-│   │   ├── /prk/                 # Projects section
+│   │   ├── /prky/                 # Projects section
 │   │   │   ├── page.tsx          # Projects listing
 │   │   │   ├── /natmood/         # EEG emotion classification
 │   │   │   │   ├── page.tsx      # natmood overview
@@ -116,12 +116,12 @@ This ensures the documentation stays current and all changes are versioned.
 │   │   │       └── /main/
 │   │   │           └── page.tsx  # Training loop
 │   │   │
-│   │   ├── /raj/                 # Blog/thoughts section
+│   │   ├── /raja/                 # Blog/thoughts section
 │   │   │   ├── page.tsx          # Blog post listing
 │   │   │   └── /[slug]/
 │   │   │       └── page.tsx      # Individual blog post
 │   │   │
-│   │   ├── /sav/                 # Gallery
+│   │   ├── /savL/                 # Gallery
 │   │   │   └── page.tsx          # Image gallery (empty)
 │   │   │
 │   │   └── /tom/                 # Contact
@@ -193,9 +193,9 @@ This ensures the documentation stays current and all changes are versioned.
 
 **Navigation Links**:
 - `/` - home
-- `/prk` - projects
-- `/sav` - gallery
-- `/raj` - thoughts
+- `/prky` - projects
+- `/savL` - gallery
+- `/raja` - thoughts
 - `/tom` - contact
 
 **Features**:
@@ -219,87 +219,87 @@ This ensures the documentation stays current and all changes are versioned.
 
 ## Routing Structure
 
-### Projects Section (`/prk`)
+### Projects Section (`/prky`)
 
-#### `/prk` - Projects Overview
-**File**: `src/app/prk/page.tsx`
+#### `/prky` - Projects Overview
+**File**: `src/app/prky/page.tsx`
 
 **Projects Listed**:
 1. **oneshotlstm** - Called oneshot because i tried to make it in one night
 2. **natmood** - A binary valence mood classifier built from scratch
 3. **natlearn** - Machine learning library built from scratch
 
-#### `/prk/natmood` - EEG Emotion Classification Project
-**File**: `src/app/prk/natmood/page.tsx`
+#### `/prky/natmood` - EEG Emotion Classification Project
+**File**: `src/app/prky/natmood/page.tsx`
 
 **Description**: A binary valence mood classifier built from scratch. DREAMER was a bad pick. Binary valence classifier using randomforest validated on dreamer and adaptable to muse 4. Primary neurological marker for positive/neutral/negative emotion. Extracts 9 features per channel while trained on four channels.
 
 **Modules**:
 1. **main** - Complete pipeline orchestrator tying all modules together
-   - File: `src/app/prk/natmood/main/page.tsx`
+   - File: `src/app/prky/natmood/main/page.tsx`
    - Code: Full pipeline from data loading to model evaluation
 
 2. **preprocessing** - Bandpass filtering and windowing for EEG signals
-   - File: `src/app/prk/natmood/preprocessing/page.tsx`
+   - File: `src/app/prky/natmood/preprocessing/page.tsx`
    - Code: Channel selection, butterworth bandpass filter, segmentation
 
 3. **features** - Band powers, Hjorth parameters, and Shannon entropy extraction
-   - File: `src/app/prk/natmood/features/page.tsx`
+   - File: `src/app/prky/natmood/features/page.tsx`
    - Code: PSD computation, 5 frequency bands, Hjorth params, entropy
 
 4. **dataloader** - DREAMER dataset loader for EEG valence classification
-   - File: `src/app/prk/natmood/dataloader/page.tsx`
+   - File: `src/app/prky/natmood/dataloader/page.tsx`
    - Code: MATLAB .mat file loading, 23 participants, 18 videos each
 
 5. **classifier** - Random Forest training and feature selection
-   - File: `src/app/prk/natmood/classifier/page.tsx`
+   - File: `src/app/prky/natmood/classifier/page.tsx`
    - Code: Label conversion, correlation-based selection, RF training
 
 **All modules dated**: 2025-12-08
 
-#### `/prk/natlearn` - ML Library From Scratch
-**File**: `src/app/prk/natlearn/page.tsx`
+#### `/prky/natlearn` - ML Library From Scratch
+**File**: `src/app/prky/natlearn/page.tsx`
 
 **Algorithms**:
 1. **kclass** (2025-12-13) - "decisions decisions hmmmmm"
-   - File: `src/app/prk/natlearn/kclass/page.tsx`
+   - File: `src/app/prky/natlearn/kclass/page.tsx`
    - Code: KClassClassification with softmax, cross-entropy loss, gradient descent
 
 2. **logreg** (2025-12-04) - "forgot to clip sigmoid but oh well"
-   - File: `src/app/prk/natlearn/logreg/page.tsx`
+   - File: `src/app/prky/natlearn/logreg/page.tsx`
    - Code: LogisticRegression class with sigmoid, cost, gradient descent
 
 3. **linreg** (2025-12-02) - "its just a guessing game"
-   - File: `src/app/prk/natlearn/linreg/page.tsx`
+   - File: `src/app/prky/natlearn/linreg/page.tsx`
    - Code: LinearRegression class with hypothesis, cost, gradient descent
 
-#### `/prk/oneshotlstm` - LSTM From Scratch
-**File**: `src/app/prk/oneshotlstm/page.tsx`
+#### `/prky/oneshotlstm` - LSTM From Scratch
+**File**: `src/app/prky/oneshotlstm/page.tsx`
 
 **Description**: Called oneshot because i tried to make it in one night. I tried making this in one night but fell asleep. Pretty cool implementation of LSTM without pytorch.
 
 **Modules**:
 1. **features** (2025-12-10) - LSTM implementation with forward and backward pass
-   - File: `src/app/prk/oneshotlstm/features/page.tsx`
+   - File: `src/app/prky/oneshotlstm/features/page.tsx`
    - Code: Full LSTM cell implementation with gates, backpropagation through time
 
 2. **main** (2025-12-10) - Training loop
-   - File: `src/app/prk/oneshotlstm/main/page.tsx`
+   - File: `src/app/prky/oneshotlstm/main/page.tsx`
    - Code: Training setup with random data (10 sequences, 425 input size, 64 hidden units)
 
-### Blog Section (`/raj`)
+### Blog Section (`/raja`)
 
-#### `/raj` - Blog Listing
-**File**: `src/app/raj/page.tsx`
+#### `/raja` - Blog Listing
+**File**: `src/app/raja/page.tsx`
 
 **Features**:
 - Displays all blog items (posts + reading links)
-- Posts: Internal links to `/raj/[slug]`
+- Posts: Internal links to `/raja/[slug]`
 - Reading links: External with ↗ icon
 - Sorted by date descending
 
-#### `/raj/[slug]` - Individual Blog Post
-**File**: `src/app/raj/[slug]/page.tsx`
+#### `/raja/[slug]` - Individual Blog Post
+**File**: `src/app/raja/[slug]/page.tsx`
 
 **Features**:
 - Dynamic routing with `generateStaticParams()`
@@ -309,13 +309,13 @@ This ensures the documentation stays current and all changes are versioned.
   - Code blocks (triple backticks)
   - Bold text (`**text**`)
   - Inline code (single backticks)
-- Back link to `/raj`
+- Back link to `/raja`
 - Shows title and date
 
 ### Other Sections
 
-#### `/sav` - Gallery
-**File**: `src/app/sav/page.tsx`
+#### `/savL` - Gallery
+**File**: `src/app/savL/page.tsx`
 **Status**: Empty, grid layout ready for images
 
 #### `/tom` - Contact
@@ -602,7 +602,7 @@ After any codebase change, commit with descriptive message and push to remote.
 2. **Privacy**: Strip EXIF metadata from images before publishing
 3. **MDX Parsing**: Custom implementation, not full MDX/JSX support
 4. **Static Only**: No database, no server-side state
-5. **Slug URLs**: Derived from filename (e.g., `hello-world.mdx` → `/raj/hello-world`)
+5. **Slug URLs**: Derived from filename (e.g., `hello-world.mdx` → `/raja/hello-world`)
 6. **Hidden Content**: Files ending in `.hidden` are excluded from build
 
 ---
@@ -611,11 +611,11 @@ After any codebase change, commit with descriptive message and push to remote.
 
 **When adding new content/features**:
 
-1. **New Project**: Add to `src/app/prk/[project-name]/page.tsx` and list in `src/app/prk/page.tsx`
-2. **New Algorithm**: Add to `src/app/prk/natlearn/[algorithm]/page.tsx` and list in `src/app/prk/natlearn/page.tsx`
+1. **New Project**: Add to `src/app/prky/[project-name]/page.tsx` and list in `src/app/prky/page.tsx`
+2. **New Algorithm**: Add to `src/app/prky/natlearn/[algorithm]/page.tsx` and list in `src/app/prky/natlearn/page.tsx`
 3. **New Blog Post**: Create `content/posts/[slug].mdx` with frontmatter
 4. **New Reading Link**: Create `content/reading/[slug].mdx` with link field
-5. **Gallery Images**: Add to `public/images/gallery/` and update `src/app/sav/page.tsx`
+5. **Gallery Images**: Add to `public/images/gallery/` and update `src/app/savL/page.tsx`
 
 **Always**:
 - Update this `structure.md` file
@@ -629,23 +629,23 @@ After any codebase change, commit with descriptive message and push to remote.
 | URL | File | Purpose |
 |-----|------|---------|
 | `/` | `src/app/page.tsx` | Home |
-| `/prk` | `src/app/prk/page.tsx` | Projects listing |
-| `/prk/natmood` | `src/app/prk/natmood/page.tsx` | EEG project hub |
-| `/prk/natmood/main` | `src/app/prk/natmood/main/page.tsx` | Pipeline orchestrator |
-| `/prk/natmood/preprocessing` | `src/app/prk/natmood/preprocessing/page.tsx` | Preprocessing code |
-| `/prk/natmood/features` | `src/app/prk/natmood/features/page.tsx` | Feature extraction |
-| `/prk/natmood/dataloader` | `src/app/prk/natmood/dataloader/page.tsx` | Dataset loader |
-| `/prk/natmood/classifier` | `src/app/prk/natmood/classifier/page.tsx` | Classifier |
-| `/prk/natlearn` | `src/app/prk/natlearn/page.tsx` | ML library hub |
-| `/prk/natlearn/kclass` | `src/app/prk/natlearn/kclass/page.tsx` | K-class classification |
-| `/prk/natlearn/linreg` | `src/app/prk/natlearn/linreg/page.tsx` | Linear regression |
-| `/prk/natlearn/logreg` | `src/app/prk/natlearn/logreg/page.tsx` | Logistic regression |
-| `/prk/oneshotlstm` | `src/app/prk/oneshotlstm/page.tsx` | LSTM from scratch hub |
-| `/prk/oneshotlstm/features` | `src/app/prk/oneshotlstm/features/page.tsx` | LSTM implementation |
-| `/prk/oneshotlstm/main` | `src/app/prk/oneshotlstm/main/page.tsx` | Training loop |
-| `/raj` | `src/app/raj/page.tsx` | Blog listing |
-| `/raj/[slug]` | `src/app/raj/[slug]/page.tsx` | Individual blog post |
-| `/sav` | `src/app/sav/page.tsx` | Gallery |
+| `/prky` | `src/app/prky/page.tsx` | Projects listing |
+| `/prky/natmood` | `src/app/prky/natmood/page.tsx` | EEG project hub |
+| `/prky/natmood/main` | `src/app/prky/natmood/main/page.tsx` | Pipeline orchestrator |
+| `/prky/natmood/preprocessing` | `src/app/prky/natmood/preprocessing/page.tsx` | Preprocessing code |
+| `/prky/natmood/features` | `src/app/prky/natmood/features/page.tsx` | Feature extraction |
+| `/prky/natmood/dataloader` | `src/app/prky/natmood/dataloader/page.tsx` | Dataset loader |
+| `/prky/natmood/classifier` | `src/app/prky/natmood/classifier/page.tsx` | Classifier |
+| `/prky/natlearn` | `src/app/prky/natlearn/page.tsx` | ML library hub |
+| `/prky/natlearn/kclass` | `src/app/prky/natlearn/kclass/page.tsx` | K-class classification |
+| `/prky/natlearn/linreg` | `src/app/prky/natlearn/linreg/page.tsx` | Linear regression |
+| `/prky/natlearn/logreg` | `src/app/prky/natlearn/logreg/page.tsx` | Logistic regression |
+| `/prky/oneshotlstm` | `src/app/prky/oneshotlstm/page.tsx` | LSTM from scratch hub |
+| `/prky/oneshotlstm/features` | `src/app/prky/oneshotlstm/features/page.tsx` | LSTM implementation |
+| `/prky/oneshotlstm/main` | `src/app/prky/oneshotlstm/main/page.tsx` | Training loop |
+| `/raja` | `src/app/raja/page.tsx` | Blog listing |
+| `/raja/[slug]` | `src/app/raja/[slug]/page.tsx` | Individual blog post |
+| `/savL` | `src/app/savL/page.tsx` | Gallery |
 | `/tom` | `src/app/tom/page.tsx` | Contact |
 
 ---
