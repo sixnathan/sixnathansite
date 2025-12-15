@@ -30,12 +30,12 @@ export default function Interests() {
               </li>
             ))}
             {favoritePapers.map((paper, index) => (
-              <li key={`fav-${index}`} className="text-[11px] text-foreground font-bold flex justify-between items-baseline gap-4">
+              <li key={`fav-${index}`} className="text-[12px] text-foreground font-semibold flex justify-between items-baseline gap-4">
                 <span>
                   <span className="mr-2">—</span>
                   {paper.title}
                 </span>
-                <span className="text-[10px] text-accent shrink-0">
+                <span className="text-[10px] text-accent shrink-0 font-normal">
                   {paper.read ? "read" : "will read"}
                 </span>
               </li>
