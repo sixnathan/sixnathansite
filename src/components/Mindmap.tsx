@@ -27,8 +27,9 @@ export default function Mindmap({ clusters }: MindmapProps) {
 
     if (clusterCount === 0) return;
 
-    const cellW = width / clusterCount;
-    const cy = height / 2;
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const triangleRadius = Math.min(width, height) * 0.3;
 
     // Get CSS variable values
     const styles = getComputedStyle(document.documentElement);
@@ -37,7 +38,10 @@ export default function Mindmap({ clusters }: MindmapProps) {
     const accent = styles.getPropertyValue("--accent").trim();
 
     clusterEntries.forEach(([name, items], i) => {
-      const cx = cellW * i + cellW / 2;
+      // Position clusters at triangle vertices (top, bottom-left, bottom-right)
+      const angle = (i * 2 * Math.PI) / clusterCount - Math.PI / 2;
+      const cx = centerX + Math.cos(angle) * triangleRadius;
+      const cy = centerY + Math.sin(angle) * triangleRadius;
 
       // Draw cluster center dot
       const centerDot = document.createElementNS(
