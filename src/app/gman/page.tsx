@@ -14,9 +14,12 @@ export default function Interests() {
           <h2 className="text-xs font-bold mb-4">papers</h2>
           <ul className="space-y-2">
             {papers.map((paper, index) => (
-              <li key={index} className="text-[11px] text-muted">
-                <span className="text-foreground mr-2">—</span>
-                {paper}
+              <li key={index} className="text-[11px] text-muted flex justify-between items-baseline gap-4">
+                <span>
+                  <span className="text-foreground mr-2">—</span>
+                  {paper.title}
+                </span>
+                <span className="text-[10px] text-accent shrink-0">{paper.status}</span>
               </li>
             ))}
           </ul>
