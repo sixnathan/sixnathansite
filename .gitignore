@@ -43,3 +43,9 @@ next-env.d.ts
 # python projects
 /messyprojects/binaryclassifier/venv/
 /messyprojects/binaryclassifier/data/DREAMER.mat
+
+# development docs
+GUIDE.md
+structure.md
+security-checklist.md
+*.code-workspace
