@@ -7,7 +7,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "oneshotlstm",
-    description: "called oneshot because i tried to make it in one night",
+    description: "done in 'almost' one night",
     link: "/prky/oneshotlstm",
   },
   {
