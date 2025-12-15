@@ -48,4 +48,5 @@ next-env.d.ts
 GUIDE.md
 structure.md
 security-checklist.md
+README.md
 *.code-workspace
