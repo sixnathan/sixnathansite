@@ -29,9 +29,9 @@ export default function Interests() {
                   <span className={paper.favorite ? "mr-2" : "text-foreground mr-2"}>—</span>
                   {paper.title}
                 </span>
-                <span className="text-[10px] text-accent shrink-0 font-normal">
-                  {paper.read ? "read" : "will read"}
-                </span>
+                {paper.read && (
+                  <span className="text-[10px] text-accent shrink-0 font-normal">read</span>
+                )}
               </li>
             ))}
           </ul>
