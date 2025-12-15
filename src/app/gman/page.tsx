@@ -11,7 +11,6 @@ export default function Interests() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="text-sm text-muted mb-10">what i'm interested in</h1>
         <Mindmap clusters={clusters} />
       </section>
 
