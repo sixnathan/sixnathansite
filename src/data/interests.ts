@@ -8,23 +8,22 @@ export const clusters: Record<string, string[]> = {
   Thoughts: [],
 };
 
-export type PaperStatus = "will read" | "reading" | "read";
-
 export interface Paper {
   title: string;
-  status: PaperStatus;
+  read: boolean;
+  added: string; // YYYY-MM-DD for ordering (not displayed)
 }
 
 export const papers: Paper[] = [
-  { title: "The Universal Weight Subspace Hypothesis", status: "read" },
-  { title: "Delving into LLM-assisted writing in biomedical publications through excess vocabulary", status: "read" },
-  { title: "Neuronal Attention Circuit (NAC) for Representation Learning", status: "will read" },
-  { title: "Asynchronous Reasoning: Training-Free Interactive Thinking LLMs", status: "will read" },
-  { title: "Small Language Models are the Future of Agentic AI", status: "read" },
-  { title: "A Lightweight Approach to Detection of AI-Generated Texts Using Stylometric Features", status: "read" },
-  { title: "StyloAI: Distinguishing AI-Generated Content with Stylometric Analysis", status: "read" },
-  { title: "Detecting Stylistic Fingerprints of Large Language Models", status: "read" },
-  { title: "Better artificial intelligence does not mean better models of biology", status: "will read" },
-  { title: "The Art of Scaling Reinforcement Learning Compute for LLMs", status: "will read" },
-  { title: "Structure and robustness of Sao Paulo public transport network", status: "read" },
+  { title: "The Universal Weight Subspace Hypothesis", read: true, added: "2024-12-15" },
+  { title: "Neuronal Attention Circuit (NAC) for Representation Learning", read: false, added: "2024-12-13" },
+  { title: "Asynchronous Reasoning: Training-Free Interactive Thinking LLMs", read: false, added: "2024-12-13" },
+  { title: "Small Language Models are the Future of Agentic AI", read: true, added: "2024-12-12" },
+  { title: "A Lightweight Approach to Detection of AI-Generated Texts Using Stylometric Features", read: true, added: "2024-12-10" },
+  { title: "StyloAI: Distinguishing AI-Generated Content with Stylometric Analysis", read: true, added: "2024-12-10" },
+  { title: "Detecting Stylistic Fingerprints of Large Language Models", read: true, added: "2024-12-10" },
+  { title: "Better artificial intelligence does not mean better models of biology", read: false, added: "2024-12-09" },
+  { title: "The Art of Scaling Reinforcement Learning Compute for LLMs", read: false, added: "2024-12-06" },
+  { title: "Delving into LLM-assisted writing in biomedical publications through excess vocabulary", read: true, added: "2024-12-14" },
+  { title: "Structure and robustness of Sao Paulo public transport network", read: true, added: "2024-11-15" },
 ];
