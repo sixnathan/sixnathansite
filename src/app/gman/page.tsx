@@ -2,9 +2,12 @@ import Mindmap from "@/components/Mindmap";
 import { clusters, papers } from "@/data/interests";
 
 export default function Interests() {
-  const sortedPapers = [...papers].sort(
-    (a, b) => new Date(b.added).getTime() - new Date(a.added).getTime()
-  );
+  const sortedPapers = [...papers].sort((a, b) => {
+    // First: unread papers come before read papers
+    if (a.read !== b.read) return a.read ? 1 : -1;
+    // Second: within each group, sort by date (most recent first)
+    return new Date(b.added).getTime() - new Date(a.added).getTime();
+  });
 
   return (
     <div className="space-y-8">
