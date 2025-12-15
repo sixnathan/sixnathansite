@@ -16,6 +16,7 @@ export interface Paper {
 }
 
 export const papers: Paper[] = [
+  { title: "Training Compute-Optimal Large Language Models", read: false, added: "2024-12-15", favorite: true },
   { title: "The Universal Weight Subspace Hypothesis", read: true, added: "2024-12-15", favorite: true },
   { title: "Neuronal Attention Circuit (NAC) for Representation Learning", read: false, added: "2024-12-13" },
   { title: "Asynchronous Reasoning: Training-Free Interactive Thinking LLMs", read: false, added: "2024-12-13" },
