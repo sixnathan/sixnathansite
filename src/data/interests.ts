@@ -16,6 +16,11 @@ export interface Paper {
 }
 
 export const papers: Paper[] = [
+  { title: "Constitutional AI: Harmlessness from AI Feedback", read: false, added: "2024-12-16" },
+  { title: "Toy Models of Superposition", read: false, added: "2024-12-16" },
+  { title: "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet", read: false, added: "2024-12-16" },
+  { title: "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training", read: false, added: "2024-12-16" },
+  { title: "Alignment Faking in Large Language Models", read: false, added: "2024-12-16" },
   { title: "Pruning Increases Orderedness in Recurrent Computation", read: false, added: "2024-12-15" },
   { title: "Training Compute-Optimal Large Language Models", read: false, added: "2024-12-15", favorite: true },
   { title: "The Universal Weight Subspace Hypothesis", read: true, added: "2024-12-15", favorite: true },
