@@ -4,8 +4,8 @@
 
 export const clusters: Record<string, string[]> = {
   ml: [],
-  neuro: [],
   philo: [],
+  games: [],
 };
 
 export interface Paper {
