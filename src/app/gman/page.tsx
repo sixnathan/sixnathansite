@@ -1,5 +1,6 @@
 import Mindmap from "@/components/Mindmap";
 import { clusters, papers } from "@/data/interests";
+import { puzzles } from "@/data/puzzles";
 
 export default function Interests() {
   const sortedPapers = [...papers].sort((a, b) => {
@@ -34,6 +35,34 @@ export default function Interests() {
                 </span>
                 {paper.read && (
                   <span className="text-[10px] text-accent shrink-0 font-normal">read</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {puzzles.length > 0 && (
+        <section className="pt-8 border-t border-muted">
+          <h2 className="text-xs font-bold mb-4">games & puzzles</h2>
+          <ul className="space-y-2">
+            {puzzles.map((item, index) => (
+              <li
+                key={index}
+                className="text-[11px] text-muted flex items-baseline gap-2"
+              >
+                <span className="text-foreground">—</span>
+                {item.url ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <span>{item.name}</span>
                 )}
               </li>
             ))}
