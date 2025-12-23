@@ -4,7 +4,7 @@
 
 export const clusters: Record<string, string[]> = {
   ml: [],
-  philo: [],
+  mind: [],
   games: [],
 };
 
