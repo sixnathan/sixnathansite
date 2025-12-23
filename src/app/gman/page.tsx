@@ -49,20 +49,25 @@ export default function Interests() {
             {puzzles.map((item, index) => (
               <li
                 key={index}
-                className="text-[11px] text-muted flex items-baseline gap-2"
+                className="text-[11px] text-muted flex justify-between items-baseline gap-4"
               >
-                <span className="text-foreground">—</span>
-                {item.url ? (
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-accent transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <span>{item.name}</span>
+                <span className="flex items-baseline gap-2">
+                  <span className="text-foreground">—</span>
+                  {item.url ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent transition-colors"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <span>{item.name}</span>
+                  )}
+                </span>
+                {item.rating !== undefined && (
+                  <span className="text-[10px] text-accent shrink-0">{item.rating}/10</span>
                 )}
               </li>
             ))}
