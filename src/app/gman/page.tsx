@@ -34,7 +34,7 @@ export default function Interests() {
                   {paper.title}
                 </span>
                 {paper.read && (
-                  <span className="text-[10px] text-accent shrink-0 font-normal">read</span>
+                  <span className="text-[10px] text-foreground shrink-0 font-normal">read</span>
                 )}
               </li>
             ))}
@@ -71,7 +71,7 @@ export default function Interests() {
                     <span className="text-[9px] text-muted">{item.played}</span>
                   )}
                   {item.rating !== undefined && (
-                    <span className="text-[10px] text-accent">{item.rating}/10</span>
+                    <span className="text-[10px] text-foreground">{item.rating}/10</span>
                   )}
                 </span>
               </li>
