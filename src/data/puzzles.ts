@@ -16,4 +16,5 @@ export const puzzles: Puzzle[] = [
   { name: "2d whale word", url: "https://www.puzzlescript.net/play.html?p=6841165", rating: 3, played: "2024-12-23" },
   { name: "the observers paradox", url: "https://www.puzzlescript.net/play.html?p=42a7e74f578b9d0bdc9c66469d97b262", rating: 8, played: "2024-12-24" },
   { name: "pipe bind", url: "https://www.puzzlescript.net/play.html?p=8627569e70bdd911680d458ba6d0826a", rating: 9, played: "2024-12-24" },
+  { name: "quantam rails", url: "https://www.puzzlescript.net/play.html?p=e614e414e570294e45533109426245d4", rating: 9, played: "2024-12-25" },
 ];
