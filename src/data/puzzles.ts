@@ -18,4 +18,5 @@ export const puzzles: Puzzle[] = [
   { name: "pipe bind", url: "https://www.puzzlescript.net/play.html?p=8627569e70bdd911680d458ba6d0826a", rating: 9, played: "2024-12-24" },
   { name: "quantam rails", url: "https://www.puzzlescript.net/play.html?p=e614e414e570294e45533109426245d4", rating: 9, played: "2024-12-25" },
   { name: "spikes and stuff", url: "https://alan.draknek.org/games/puzzlescript/spikes-n-stuff.php", rating: 10, played: "2024-12-26" },
+  { name: "train braining", url: "https://alan.draknek.org/games/puzzlescript/train.php", rating: 8, played: "2024-12-27" },
 ];
