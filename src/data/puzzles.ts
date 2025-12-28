@@ -19,4 +19,5 @@ export const puzzles: Puzzle[] = [
   { name: "quantam rails", url: "https://www.puzzlescript.net/play.html?p=e614e414e570294e45533109426245d4", rating: 9, played: "2024-12-25" },
   { name: "spikes and stuff", url: "https://alan.draknek.org/games/puzzlescript/spikes-n-stuff.php", rating: 10, played: "2024-12-26" },
   { name: "train braining", url: "https://alan.draknek.org/games/puzzlescript/train.php", rating: 8, played: "2024-12-27" },
+  { name: "marble shoot", url: "https://www.puzzlescript.net/play.html?p=81b9430a6c09b355f6379c0f63beb04c", rating: 8, played: "2024-12-28" },
 ];
