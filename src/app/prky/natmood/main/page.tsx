@@ -12,7 +12,7 @@ export default function Main() {
       </section>
 
       <section>
-        <pre className="p-4 border border-zinc-400 rounded-lg overflow-x-auto">
+        <pre className="p-4 border border-muted rounded-lg overflow-x-auto">
           <code>{`import numpy as np
 from src.dataloader import loaddreamer
 from src.preprocessing import selectchannels, bandpassfilter

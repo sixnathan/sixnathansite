@@ -12,7 +12,7 @@ export default function LogisticRegression() {
       </section>
 
       <section>
-        <pre className="p-4 border border-zinc-400 rounded-lg whitespace-pre-wrap break-words">
+        <pre className="p-4 border border-muted rounded-lg whitespace-pre-wrap break-words">
           <code>{`import numpy as np
 
 class LogisticRegression:

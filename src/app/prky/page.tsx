@@ -33,7 +33,7 @@ export default function Projects() {
         {projects.map((project) => (
           <article
             key={project.title}
-            className="p-4 border border-zinc-400 rounded-lg hover:border-zinc-300 transition-colors"
+            className="p-4 border border-muted rounded-lg hover:border-foreground transition-colors"
           >
             <h2 className="text-lg font-semibold mb-2">
               {project.link ? (

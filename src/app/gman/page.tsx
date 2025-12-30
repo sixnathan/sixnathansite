@@ -25,8 +25,8 @@ export default function Interests() {
                 key={index}
                 className={
                   paper.favorite
-                    ? "text-[12px] text-foreground font-semibold flex justify-between items-baseline gap-4"
-                    : "text-[11px] text-muted flex justify-between items-baseline gap-4"
+                    ? "text-xs text-foreground font-semibold flex justify-between items-center gap-4"
+                    : "text-xs text-muted flex justify-between items-center gap-4"
                 }
               >
                 <span>
@@ -49,9 +49,9 @@ export default function Interests() {
             {puzzles.map((item, index) => (
               <li
                 key={index}
-                className="text-[11px] text-muted flex justify-between items-baseline gap-4"
+                className="text-xs text-muted flex justify-between items-center gap-4"
               >
-                <span className="flex items-baseline gap-2">
+                <span className="flex items-center gap-2">
                   <span className="text-foreground">—</span>
                   {item.url ? (
                     <a
@@ -66,9 +66,9 @@ export default function Interests() {
                     <span>{item.name}</span>
                   )}
                 </span>
-                <span className="flex items-baseline gap-3 shrink-0">
+                <span className="flex items-center gap-3 shrink-0">
                   {item.played && (
-                    <span className="text-[9px] text-muted">{item.played}</span>
+                    <span className="text-[10px] text-muted">{item.played}</span>
                   )}
                   {item.rating !== undefined && (
                     <span className="text-[10px] text-foreground">{item.rating}/10</span>

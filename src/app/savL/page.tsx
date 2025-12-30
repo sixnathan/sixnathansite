@@ -19,7 +19,7 @@ export default function Gallery() {
         {images.map((image, index) => (
           <figure
             key={index}
-            className="border border-zinc-400 rounded-lg overflow-hidden"
+            className="border border-muted rounded-lg overflow-hidden"
           >
             <div className="relative aspect-video">
               <Image

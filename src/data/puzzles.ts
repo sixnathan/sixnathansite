@@ -20,4 +20,6 @@ export const puzzles: Puzzle[] = [
   { name: "spikes and stuff", url: "https://alan.draknek.org/games/puzzlescript/spikes-n-stuff.php", rating: 10, played: "2024-12-26" },
   { name: "train braining", url: "https://alan.draknek.org/games/puzzlescript/train.php", rating: 8, played: "2024-12-27" },
   { name: "marble shoot", url: "https://www.puzzlescript.net/play.html?p=81b9430a6c09b355f6379c0f63beb04c", rating: 8, played: "2024-12-28" },
+  { name: "a wire power", url: "https://beekie.itch.io/a-wire-power", rating: 7, played: "2025-12-30" },
+  { name: "midwinter springtime", url: "https://pap4qlxxlevb.itch.io/midwinter-springtime", rating: 6, played: "2025-12-30" },
 ];

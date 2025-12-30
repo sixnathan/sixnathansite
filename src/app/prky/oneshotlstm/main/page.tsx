@@ -14,7 +14,7 @@ export default function MainModule() {
 
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">implementation</h2>
-        <pre className="p-4 border border-zinc-400 rounded-lg overflow-x-auto">
+        <pre className="p-4 border border-muted rounded-lg overflow-x-auto">
           <code className="text-sm font-mono">{`from features import *
 
 todaysinput = np.random.randn(10, 425)
