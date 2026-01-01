@@ -68,7 +68,7 @@ export default function Interests() {
                 </span>
                 <span className="flex items-center gap-3 shrink-0">
                   {item.played && (
-                    <span className="text-[10px] text-muted">{item.played}</span>
+                    <span className="text-[10px] text-muted hidden">{item.played}</span>
                   )}
                   {item.rating !== undefined && (
                     <span className="text-[10px] text-foreground">{item.rating}/10</span>

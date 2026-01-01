@@ -29,7 +29,7 @@ export default async function BlogPost({ params }: Props) {
           ← Back to blog
         </Link>
         <h1 className="text-3xl font-bold mt-4 mb-2">{post.title}</h1>
-        <time className="text-sm text-muted">{post.date}</time>
+        <time className="text-sm text-muted hidden">{post.date}</time>
       </header>
 
       <div className="prose-custom">

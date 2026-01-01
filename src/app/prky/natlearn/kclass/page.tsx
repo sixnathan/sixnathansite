@@ -8,7 +8,7 @@ export default function KClassClassification() {
       </div>
       <section>
         <h1 className="text-3xl font-bold mb-4">kclass</h1>
-        <time className="text-sm text-muted">2025-12-13</time>
+        <time className="text-sm text-muted hidden">2025-12-13</time>
       </section>
 
       <section>

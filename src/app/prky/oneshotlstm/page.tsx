@@ -53,7 +53,7 @@ export default function OneshotLSTM() {
               </a>
             </h2>
             <p className="text-muted text-sm mb-1">{module.description}</p>
-            <time className="text-xs text-muted">{module.date}</time>
+            <time className="text-xs text-muted hidden">{module.date}</time>
           </article>
         ))}
       </section>

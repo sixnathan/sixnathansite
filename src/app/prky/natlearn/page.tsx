@@ -59,7 +59,7 @@ export default function Natlearn() {
               </a>
             </h2>
             <p className="text-muted text-sm mb-1">{algorithm.description}</p>
-            <time className="text-xs text-muted">{algorithm.date}</time>
+            <time className="text-xs text-muted hidden">{algorithm.date}</time>
           </article>
         ))}
       </section>

@@ -18,7 +18,7 @@ export default function Blog() {
             if (item.type === "reading") {
               return (
                 <article key={item.slug} className="group">
-                  <time className="text-sm text-muted">{item.date}</time>
+                  <time className="text-sm text-muted hidden">{item.date}</time>
                   <div className="flex items-start gap-2 mt-1">
                     <h2 className="text-lg font-semibold group-hover:text-accent transition-colors">
                       <a
@@ -39,7 +39,7 @@ export default function Blog() {
               return (
                 <article key={item.slug} className="group">
                   <Link href={`/raja/${item.slug}`} className="block">
-                    <time className="text-sm text-muted">{item.date}</time>
+                    <time className="text-sm text-muted hidden">{item.date}</time>
                     <h2 className="text-lg font-semibold mt-1 group-hover:text-accent transition-colors">
                       {item.title}
                     </h2>
